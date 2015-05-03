@@ -123,24 +123,7 @@ if (isset($_POST)){
             die();
         }
     }
-
-    
-    
-    
-    
-    
-    if ($_POST['action'] == 'draganddropupload') {
-        dump($_POST);
-        dump($_FILES);
-        die();
-    }
-    
-    
-    
-    
-    
-    
-    
+ 
     
     
 }

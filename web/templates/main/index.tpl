@@ -30,8 +30,6 @@
                 ],
                 toolbar: "insertfile undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent"
             });
-
-            
         {/literal}
     </script>
     
@@ -61,16 +59,12 @@
         {$MAIN_URL}
         <br />
         <a href="{$BASE_URL}">back to home page</a>
-        
-        
-        
+
 
 <div class="dropzone-wrap"><form class="dropzone" action="{$MAIN_URL}/upload.php" method="post" enctype="multipart/form-data"></form></div>
 
 
-        <div class="user-bar gradient">
-            
-        </div>
+        <div class="user-bar gradient"></div>
         
         <div class="panel-desktop gradient">
             <div class="panel-activator">

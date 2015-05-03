@@ -16,8 +16,6 @@ move_uploaded_file(
 
 
 
-
-
 dump($_POST);
 dump($_FILES);
 die();

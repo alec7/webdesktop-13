@@ -1,13 +1,8 @@
 /*
  * Author: Ivan Dublianskyi 2015
  */
-function showDropzone(){
-    
-}
 var dropTarget = $('.dropzone'),
-    html = $('html'),
-    showDrag = false,
-    timeout = -1;
+    html = $('html');
 
 html.bind('dragenter', function () {
     $('.dropzone-wrap').addClass("magictime vanishIn");
