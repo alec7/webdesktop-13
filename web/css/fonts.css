@@ -1,0 +1,15 @@
+/* 
+    Created on : 2015-03-07, 20:46:38
+    Author     : Ivan Dublianski
+*/
+
+@font-face {
+    font-family: 'algerian';
+    src: url('fonts/Algerian.eot');
+    src: url('fonts/Algerian.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Algerian.woff2') format('woff2'),
+         url('fonts/Algerian.woff') format('woff'),
+         url('fonts/Algerian.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

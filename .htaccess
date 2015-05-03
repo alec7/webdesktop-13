@@ -1,0 +1,4 @@
+php_flag display_startup_errors of
+php_flag display_errors of
+php_flag html_errors of
+php_flag log_errors of
