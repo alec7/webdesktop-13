@@ -9,9 +9,14 @@
     <meta name="description" content="" />
         
     <link rel="stylesheet" type="text/css" href="{$BASE_URL}/css/wstyle.css" />
-    <script type="text/javascript" src="{$BASE_URL}/js/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="{$BASE_URL}/js/wscripts.js"></script>
-    <script type="text/javascript" src="wajax.js"></script>
+    <script defer type="text/javascript" src="{$BASE_URL}/js/jquery-1.11.2.min.js"></script>
+    <script defer type="text/javascript" src="{$BASE_URL}/js/wscripts.js"></script>
+    <script defer type="text/javascript" src="wajax.js"></script>
+    
+    
+    <script defer type="text/javascript" src="{$BASE_URL}/js/dropzone.js"></script>
+    <link rel="stylesheet" type="text/css" href="{$BASE_URL}/css/dropzone.css" />
+    <script defer type="text/javascript" src="{$BASE_URL}/js/dndfunctions.js"></script>
     
     <script type="text/javascript" src="{$BASE_URL}/js/tinymce/tinymce.min.js"></script>
     <script type="text/javascript">
@@ -20,10 +25,10 @@
                 selector: "textarea.editor",
                 plugins: [
                     "advlist autolink lists link image charmap print preview anchor",
-                    "searchreplace visualblocks code fullscreen",
+                    "searchreplace visualblocks code",
                  "insertdatetime media table contextmenu paste"
                 ],
-                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+                toolbar: "insertfile undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent"
             });
 
             
@@ -48,10 +53,7 @@
             <input type="text" class="note-title" value="the title of my own note" />
             <textarea class="editor" name="content"></textarea>
         </div>
-        
-        
-        
-        
+            
         <div class="startpopup"></div>
             {include file="user/user-forms.html"}
             
@@ -59,6 +61,22 @@
         {$MAIN_URL}
         <br />
         <a href="{$BASE_URL}">back to home page</a>
+        
+        
+        
+
+<div class="dropzone-wrap"><form class="dropzone" action="{$MAIN_URL}/upload.php" method="post" enctype="multipart/form-data"></form></div>
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
 
         <div class="user-bar gradient">

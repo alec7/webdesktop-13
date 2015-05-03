@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-04-18 15:39:38
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-05-03 10:56:48
          compiled from "index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2860455325e9a9f64e4-12403151%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '26aa970b2c378f08ce5ee51da90c5e7d5cc28ee5' => 
     array (
       0 => 'index.tpl',
-      1 => 1429359790,
+      1 => 1430643380,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55325e9aa50c01_46381224',
   'variables' => 
   array (
     'title' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'error' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_55325e9aa50c01_46381224',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_55325e9aa50c01_46381224')) {function content_55325e9aa50c01_46381224($_smarty_tpl) {?><!DOCTYPE html>
 <html>
@@ -40,15 +40,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 /css/wstyle.css" />
     <?php echo '<script'; ?>
- type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+ defer type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 /js/jquery-1.11.2.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+ defer type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 /js/wscripts.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- type="text/javascript" src="wajax.js"><?php echo '</script'; ?>
+ defer type="text/javascript" src="wajax.js"><?php echo '</script'; ?>
+>
+    
+    
+    <?php echo '<script'; ?>
+ defer type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/js/dropzone.js"><?php echo '</script'; ?>
+>
+    <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/css/dropzone.css" />
+    <?php echo '<script'; ?>
+ defer type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/js/dndfunctions.js"><?php echo '</script'; ?>
 >
     
     <?php echo '<script'; ?>
@@ -62,10 +74,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 selector: "textarea.editor",
                 plugins: [
                     "advlist autolink lists link image charmap print preview anchor",
-                    "searchreplace visualblocks code fullscreen",
+                    "searchreplace visualblocks code",
                  "insertdatetime media table contextmenu paste"
                 ],
-                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+                toolbar: "insertfile undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent"
             });
 
             
@@ -92,10 +104,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <input type="text" class="note-title" value="the title of my own note" />
             <textarea class="editor" name="content"></textarea>
         </div>
-        
-        
-        
-        
+            
         <div class="startpopup"></div>
             <?php echo $_smarty_tpl->getSubTemplate ("user/user-forms.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null, array(), 0);?>
 
@@ -107,6 +116,23 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <br />
         <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 ">back to home page</a>
+        
+        
+        
+
+<div class="dropzone-wrap"><form class="dropzone" action="<?php echo $_smarty_tpl->tpl_vars['MAIN_URL']->value;?>
+/upload.php" method="post" enctype="multipart/form-data"></form></div>
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
 
         <div class="user-bar gradient">

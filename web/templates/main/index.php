@@ -39,7 +39,7 @@ function dump($value) {
 }
 
 if (isset($_POST)){
-    //dump($_POST);
+//dump($_POST);die();
     if ($_POST['login'] == 'login') {
         if($user = $oLogin->Log($_POST)){
             $smarty->assign('user', $user);
@@ -123,6 +123,23 @@ if (isset($_POST)){
             die();
         }
     }
+
+    
+    
+    
+    
+    
+    if ($_POST['action'] == 'draganddropupload') {
+        dump($_POST);
+        dump($_FILES);
+        die();
+    }
+    
+    
+    
+    
+    
+    
     
     
     

@@ -5,13 +5,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '26aa970b2c378f08ce5ee51da90c5e7d5cc28ee5' => 
     array (
       0 => 'index.tpl',
-      1 => 1429359790,
+      1 => 1430643380,
       2 => 'file',
     ),
     'a1e986bbba915f5b96d8626d30df4c238c131cee' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webdesktop\\web\\templates\\main\\ajax\\notepad-edit.html',
-      1 => 1428331619,
+      1 => 1429392271,
       2 => 'file',
     ),
     '0ccedffad00cf56538e5676ec51c4b18823152cd' => 
@@ -23,11 +23,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '2860455325e9a9f64e4-12403151',
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_5532694adacd97_88681849',
+  'unifunc' => 'content_5545e644277de6_95598019',
   'has_nocache_code' => false,
   'cache_lifetime' => 1,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5532694adacd97_88681849')) {function content_5532694adacd97_88681849($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5545e644277de6_95598019')) {function content_5545e644277de6_95598019($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     
@@ -38,9 +38,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <meta name="description" content="" />
         
     <link rel="stylesheet" type="text/css" href="http://localhost/webdesktop/web/templates/main/../../css/wstyle.css" />
-    <script type="text/javascript" src="http://localhost/webdesktop/web/templates/main/../../js/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="http://localhost/webdesktop/web/templates/main/../../js/wscripts.js"></script>
-    <script type="text/javascript" src="wajax.js"></script>
+    <script defer type="text/javascript" src="http://localhost/webdesktop/web/templates/main/../../js/jquery-1.11.2.min.js"></script>
+    <script defer type="text/javascript" src="http://localhost/webdesktop/web/templates/main/../../js/wscripts.js"></script>
+    <script defer type="text/javascript" src="wajax.js"></script>
+    
+    
+    <script defer type="text/javascript" src="http://localhost/webdesktop/web/templates/main/../../js/dropzone.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://localhost/webdesktop/web/templates/main/../../css/dropzone.css" />
+    <script defer type="text/javascript" src="http://localhost/webdesktop/web/templates/main/../../js/dndfunctions.js"></script>
     
     <script type="text/javascript" src="http://localhost/webdesktop/web/templates/main/../../js/tinymce/tinymce.min.js"></script>
     <script type="text/javascript">
@@ -49,10 +54,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 selector: "textarea.editor",
                 plugins: [
                     "advlist autolink lists link image charmap print preview anchor",
-                    "searchreplace visualblocks code fullscreen",
+                    "searchreplace visualblocks code",
                  "insertdatetime media table contextmenu paste"
                 ],
-                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+                toolbar: "insertfile undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent"
             });
 
             
@@ -66,7 +71,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <body>
         <div class="genpopup"></div>
         <div class="notepad-window" id="notepad-edit"> 
-                <br />
+            <div class="window-header">
+    <img src="http://localhost/webdesktop/web/templates/main/../../img/delete.png" class="window-close item-trans" title="Close" />
+</div>
+<div class="note-ttl"></div>
+<div class="wind-wrap"></div>
+
     
         </div>
         <div id="notepad-add">
@@ -77,10 +87,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <input type="text" class="note-title" value="the title of my own note" />
             <textarea class="editor" name="content"></textarea>
         </div>
-        
-        
-        
-        
+            
         <div class="startpopup"></div>
             <div class="onpopup">
     <div class="login-form">
@@ -102,6 +109,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         http://localhost/webdesktop/web/templates/main
         <br />
         <a href="http://localhost/webdesktop/web/templates/main/../..">back to home page</a>
+        
+        
+        
+
+<div class="dropzone-wrap"><form class="dropzone" action="http://localhost/webdesktop/web/templates/main/upload.php" method="post" enctype="multipart/form-data"></form></div>
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
 
         <div class="user-bar gradient">

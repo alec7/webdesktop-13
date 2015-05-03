@@ -40,6 +40,7 @@ position: relative;
 
 /*   Web desktop styles   */
 .blured{
+will-change: auto;
 filter: blur(2px);
 -webkit-filter: blur(2px);
 -moz-filter: blur(2px);
@@ -148,6 +149,7 @@ bottom: 0;
 transition: 200ms;
 }
 .gradient{
+will-change: opacity;
 background: rgba(0,198,224,0.75);
 background: -moz-linear-gradient(top, rgba(0,198,224,0.75) 0%, rgba(56,111,194,0.75) 4%, rgba(0,35,133,0.75) 60%, rgba(2,105,174,0.75) 82%, rgba(0,198,224,0.75) 100%);
 background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,198,224,1)), color-stop(4%, rgba(56,111,194,1)), color-stop(60%, rgba(0,35,133,1)), color-stop(82%, rgba(2,105,174,1)), color-stop(100%, rgba(0,198,224,1)));
@@ -162,6 +164,7 @@ z-index: 1;
 height: 67px;
 }
 .panel-activator{
+will-change: transform;
 width: 50px;
 height: 50px;
 border-radius: 50%;
@@ -273,6 +276,7 @@ box-sizing: border-box;
 cursor: default;
 }
 .item-trans{
+will-change: opacity;
 transition: all 100ms ease-out 100ms;
 -webkit-transition: all 100ms linear 100ms;
 -moz-transition: all 100ms ease-out 100ms;
@@ -306,6 +310,12 @@ border: 2px solid red;
 box-sizing: border-box;
 border-radius: 50%;
 opacity: 1 !important;
+  will-change: opacity;
+  transition: all 100ms ease-out 100ms;
+  -webkit-transition: all 100ms linear 100ms;
+  -moz-transition: all 100ms ease-out 100ms;
+  -ms-transition: all 100ms ease-out 100ms;
+  -o-transition: all 100ms ease-out 100ms;
 }
 .add-item{
 width: 20px;
@@ -322,7 +332,7 @@ border-radius: 50%;
 opacity: 1 !important;
 }
 .notepad-window{
-border: 7px solid #07142a;
+/*border: 7px solid #07142a;
 border-top: 30px solid #07142a;
 background: white;
 width: 300px;
@@ -334,7 +344,28 @@ position: absolute;
 display: none;
 z-index: 3;
 color: black;
-padding: 10px;
+padding: 10px;*/
+
+border: 7px solid #07142a;
+background: white;
+width: 500px;
+max-height: 400px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+position: absolute;
+display: none;
+z-index: 3;
+color: black;
+padding: 10px 0 2px 0;
+overflow: hidden;
+
+}
+.wind-wrap{
+  width: 491px;
+  height: 300px;
+  overflow-y: scroll;
+  padding: 10px 0 0 10px;;
 }
 .genpopup{
   will-change: opacity;
@@ -424,3 +455,12 @@ outline: none;
 width: 490px;
 margin-left: 5px;
 }
+.note-ttl{
+text-align: center;
+font: 16px/24px Tahoma;
+font-weight: bold;
+}
+
+
+
+
