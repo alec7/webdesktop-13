@@ -7,11 +7,12 @@ var dropTarget = $('.dropzone'),
     timeout = -1;
 
 html.bind('dragenter', function () {
-//    $('.dropzone-wrap').fadeIn(function(){
-//        $(this).addClass("magictime vanishIn");
-//    });
     $('.dropzone-wrap').addClass("magictime vanishIn");
 });
+//html.bind('dragout', function () {
+//    alert("aaa");
+//    //$('.dropzone-wrap').removeClass("vanishIn").addClass("vanishOut");
+//});
 //$(".vvv").click(function(){
 //    $(this).fadeIn(function(){
 //        $(this).addClass("magictime vanishIn");
