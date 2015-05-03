@@ -134,10 +134,7 @@ $(document).ready(function(){
 /* Drag and drop method start 1 */
 
 
-
-
-
-    
+ 
    
 });
 

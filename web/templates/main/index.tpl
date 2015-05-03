@@ -68,17 +68,6 @@
 <div class="dropzone-wrap"><form class="dropzone" action="{$MAIN_URL}/upload.php" method="post" enctype="multipart/form-data"></form></div>
 
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-
         <div class="user-bar gradient">
             
         </div>

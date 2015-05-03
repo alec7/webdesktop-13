@@ -13,12 +13,6 @@ html.bind('dragenter', function () {
 //    alert("aaa");
 //    //$('.dropzone-wrap').removeClass("vanishIn").addClass("vanishOut");
 //});
-//$(".vvv").click(function(){
-//    $(this).fadeIn(function(){
-//        $(this).addClass("magictime vanishIn");
-//    });
-//            
-//});
 
 //html.bind('dragover', function(){
 //    showDrag = true; 
