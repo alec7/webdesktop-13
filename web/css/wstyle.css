@@ -332,20 +332,6 @@ border-radius: 50%;
 opacity: 1 !important;
 }
 .notepad-window{
-/*border: 7px solid #07142a;
-border-top: 30px solid #07142a;
-background: white;
-width: 300px;
-height: 400px;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-position: absolute;
-display: none;
-z-index: 3;
-color: black;
-padding: 10px;*/
-
 border: 7px solid #07142a;
 background: white;
 width: 500px;

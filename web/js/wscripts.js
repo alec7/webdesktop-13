@@ -1,3 +1,7 @@
+/*
+ * 
+ * @Author: Ivan Dublianski 2015
+ */
 $(document).ready(function(){
     
     var nottitle = "Hi " + name + "!";
