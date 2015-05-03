@@ -1,0 +1,9 @@
+{foreach from=$notd item=notepad name=n}
+    <div class="notepad-item item-trans" id="notepad_item_{$notepad.id}" ident="{$notepad.id}" >
+        <div class="notepad-item-wrap" id="notepad_item_{$notepad.id}" ident="{$notepad.id}"></div>
+            {$notepad.title|truncate:45:"":false}
+        
+        <div class="delete-item item-trans" id="{$notepad.id}" title="delete item"></div>
+    </div>
+    
+{/foreach}

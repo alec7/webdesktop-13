@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-04-04 15:51:09
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-04-18 15:39:38
          compiled from "index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:32150551f0f975b7bf2-37611144%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2860455325e9a9f64e4-12403151%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '26aa970b2c378f08ce5ee51da90c5e7d5cc28ee5' => 
     array (
       0 => 'index.tpl',
-      1 => 1428155453,
+      1 => 1429359790,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '32150551f0f975b7bf2-37611144',
+  'nocache_hash' => '2860455325e9a9f64e4-12403151',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_551f0f97604324_01992891',
   'variables' => 
   array (
     'title' => 0,
@@ -25,8 +23,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'error' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55325e9aa50c01_46381224',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_551f0f97604324_01992891')) {function content_551f0f97604324_01992891($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_55325e9aa50c01_46381224')) {function content_55325e9aa50c01_46381224($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     
@@ -51,11 +51,51 @@ $_valid = $_smarty_tpl->decodeProperties(array (
  type="text/javascript" src="wajax.js"><?php echo '</script'; ?>
 >
     
+    <?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/js/tinymce/tinymce.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript">
+        
+            tinymce.init({
+                selector: "textarea.editor",
+                plugins: [
+                    "advlist autolink lists link image charmap print preview anchor",
+                    "searchreplace visualblocks code fullscreen",
+                 "insertdatetime media table contextmenu paste"
+                ],
+                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+            });
+
+            
+        
+    <?php echo '</script'; ?>
+>
+    
     <!-- Bootstrap included -->
     
     
     
     <body>
+        <div class="genpopup"></div>
+        <div class="notepad-window" id="notepad-edit"> 
+            <?php echo $_smarty_tpl->getSubTemplate ('./ajax/notepad-edit.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null, array(), 0);?>
+
+        </div>
+        <div id="notepad-add">
+            <div class="window-header">
+                <div class="save-note item-trans" title="Add Note"></div>
+                <img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/img/delete.png" class="window-close item-trans" title="Close" />
+            </div>
+            <input type="text" class="note-title" value="the title of my own note" />
+            <textarea class="editor" name="content"></textarea>
+        </div>
+        
+        
+        
+        
         <div class="startpopup"></div>
             <?php echo $_smarty_tpl->getSubTemplate ("user/user-forms.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null, array(), 0);?>
 

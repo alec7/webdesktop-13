@@ -21,11 +21,16 @@ $smarty->assign('MAIN_URL', $MAIN_URL);
 $BASE_URL = $MAIN_URL."/../..";
 $smarty->assign('BASE_URL', $BASE_URL);
 
-
-$smarty->assign('error', "Coś tu jest kurwa");
+$error = "Coś tu jest kurwa";
+$smarty->assign('error', $error);
 
 //$date = date('Y-m-d', time()); //date('m/d/Y h:i:s a', time());
 //$oDesktop->ClearCookiesTable($date);
+
+
+//ini_set('display_errors', 1); 
+//error_reporting(E_ALL);
+
 
 function dump($value) {
     echo '<pre style="color: red;">';
@@ -34,6 +39,7 @@ function dump($value) {
 }
 
 if (isset($_POST)){
+    //dump($_POST);
     if ($_POST['login'] == 'login') {
         if($user = $oLogin->Log($_POST)){
             $smarty->assign('user', $user);
@@ -55,15 +61,72 @@ if (isset($_POST)){
             $smarty->display('ajax/user-panel.html');
             die();
         }else{
-            echo "Fatal error!!! Write to administrator";
-            $smarty->assign('error', "Fatal error!!! Write to administrator");
+            echo "Fatal error!!! Please reload the page";
+            $smarty->assign('error', "Fatal error!!! Please reload the page");
+            
+            if (isset($_SERVER['HTTP_COOKIE'])) {
+                $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
+                foreach ($cookies as $cookie) {
+                    $parts = explode('=', $cookie);
+                    $name = trim($parts[0]);
+                    setcookie($name, '', time() - 1000);
+                    setcookie($name, '', time() - 1000, '/');
+                }
+            }
+
+
             die();
         }
     }
     
+    if ($_POST['action'] == 'loadNotepad') {
+        if($notd = $oDesktop->loadNotepad($_POST)){
+            $smarty->assign('notd', $notd);
+            $smarty->display('ajax/user-notepad.html');
+            die();
+        }else{
+            echo "You have no items in notebook";
+            $smarty->assign('error', "You have no items in notebook");
+            die();
+        }
+    }
+    
+    if ($_POST['action'] == 'deleteNotepadItem') {
+        if($oDesktop->deleteNotepadItem($_POST)){
+            die();
+        }else{
+            //echo "You have no items in notebook";
+            //$smarty->assign('error', "You have no items in notebook");
+            die();
+        }
+    }
+    
+    if ($_POST['action'] == 'editNotepad') {
+        if($editntd = $oDesktop->loadNotepadEditForm($_POST)){
+            $smarty->assign('editntd', $editntd);
+            $smarty->display('ajax/notepad-edit.html');
+            die();
+        }
+        else{
+            echo "Error! Please reload the page";
+            $smarty->assign('error', "Error! Please reload the page");
+            die();
+        }
+    }
+    
+    if ($_POST['action'] == 'addNote') {
+        if($oDesktop->addNote($_POST)){
+            die();
+        }else{
+            //echo "You have no items in notebook";
+            //$smarty->assign('error', "You have no items in notebook");
+            die();
+        }
+    }
+    
+    
+    
 }
-
-
 
 
 
@@ -76,4 +139,3 @@ if($MAIN_URL !=''){
     echo "error";
     die();
 }
-

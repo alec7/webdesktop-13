@@ -28,7 +28,15 @@ color: white;
 .clear{
 clear: both;
 }
-
+.h4{
+width: 100%;
+color: red !important;
+text-align: center;
+font: 16px/20px Tahoma;
+color: #500a7d;
+background: rgba(0,0,0,0.75);
+position: relative;
+}
 
 /*   Web desktop styles   */
 .blured{
@@ -101,8 +109,6 @@ border: 2px solid #3a2e9d;
 color: #3a2e9d;
 outline: none;
 width: 225px;
-
-
 }
 .onpopup .submit{
 border: 2px solid #3a2e9d;
@@ -221,8 +227,12 @@ height: 400px;
 position: fixed;
 bottom: 70px;
 display: none;
-z-index: 1;
+z-index: 3;
 box-shadow: 0 0 20px 5px rgba(255,255,255,0.75);
+}
+.user-wrapper{
+width: 100%;
+display: inline-block; /*height: 75px;*/
 }
 .panel-login{
 display: block;
@@ -240,4 +250,177 @@ cursor: pointer;
 }
 #idszka{
 display: none;
+}
+.user-notepad{
+width: 345px;
+display: inline-block;
+/*height: 150px;*/
+background: rgba(0,0,0,0.75);
+padding: 6px 0 5px 5px;
+}
+.notepad-item{
+border: 1px solid transparent;
+border-radius: 50px;
+width: 330px;
+height: 25px;
+margin-left: 5px;
+font: 15px/21px Tahoma;
+margin-bottom: 1px;
+padding: 0 25px 0 15px;
+overflow: hidden;
+position: relative;
+box-sizing: border-box;
+cursor: default;
+}
+.item-trans{
+transition: all 100ms ease-out 100ms;
+-webkit-transition: all 100ms linear 100ms;
+-moz-transition: all 100ms ease-out 100ms;
+-ms-transition: all 100ms ease-out 100ms;
+-o-transition: all 100ms ease-out 100ms;
+}
+.notepad-item:hover{
+border: 1px solid #500a7d;
+font-size: 16px;
+}
+.notepad-item:hover .delete-item{
+opacity: 0.5;
+}
+.notepad-item-wrap{
+  width: 305px;
+  height: 25px;
+  position: absolute;
+  left: 0;
+}
+.delete-item{
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  opacity: 0;
+  right: 5px;
+  top: 4px;
+  background: url(../img/delete-s.png) no-repeat center;
+}
+.delete-item:hover{
+border: 2px solid red;
+box-sizing: border-box;
+border-radius: 50%;
+opacity: 1 !important;
+}
+.add-item{
+width: 20px;
+height: 20px;
+position: absolute;
+right: 5px;
+top: 5px;
+opacity: 0.75;
+}
+.add-item:hover{
+border: 2px solid white;
+box-sizing: border-box;
+border-radius: 50%;
+opacity: 1 !important;
+}
+.notepad-window{
+border: 7px solid #07142a;
+border-top: 30px solid #07142a;
+background: white;
+width: 300px;
+height: 400px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+position: absolute;
+display: none;
+z-index: 3;
+color: black;
+padding: 10px;
+}
+.genpopup{
+  will-change: opacity;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 67px;
+  left: 0;
+  background: rgba(0,0,0,0);
+  z-index: 2;
+  display: none;
+}
+#notepad-add{
+border: 7px solid #07142a;
+background: white;
+width: 500px;
+max-height: 400px;
+/*width: 40%;
+height: 40%;*/
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+position: absolute;
+display: none;
+z-index: 3;
+color: black;
+padding: 10px 0 2px 0;
+overflow: hidden;
+}
+.window-header{
+background: #07142a;
+height: 30px;
+width: 510px;
+position: relative;
+left: -10px;
+top: -10px;
+}
+.window-close{
+width: 21px;
+height: 21px;
+position: absolute;
+right: 15px;
+top: 0px;
+opacity: 0.5;
+}
+.window-close:hover{
+border: 2px solid red;
+box-sizing: border-box;
+border-radius: 50%;
+opacity: 1 !important;
+}
+.editor{
+max-height: 300px;
+}
+.save-note{
+position: absolute;
+width: 21px;
+height: 21px;
+left: 25px;
+top: 0px;
+cursor: default;
+background: url(../img/add-s.png) no-repeat center;
+}
+.save-note:hover{
+border: 2px solid white;
+box-sizing: border-box;
+border-radius: 50%;
+}
+.note-title{
+  width: 385px;
+  height: 35px;
+  margin-left: 55px;
+  margin-bottom: 10px;
+  color: #07142a;
+  transition: 200ms;
+  border: 1px solid black;
+  border-radius: 50px;
+  box-shadow: none;
+  padding: 0 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.note-title:focus{
+border: 2px solid #3a2e9d;
+color: #3a2e9d;
+outline: none;
+width: 490px;
+margin-left: 5px;
 }

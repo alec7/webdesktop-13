@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {*config_load file="var.conf" section="setup"*}
+    {*config_load file="{$BASE_URL}/configs/var.conf"*}
     <title>{$title}</title>
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -13,12 +13,45 @@
     <script type="text/javascript" src="{$BASE_URL}/js/wscripts.js"></script>
     <script type="text/javascript" src="wajax.js"></script>
     
+    <script type="text/javascript" src="{$BASE_URL}/js/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript">
+        {literal}
+            tinymce.init({
+                selector: "textarea.editor",
+                plugins: [
+                    "advlist autolink lists link image charmap print preview anchor",
+                    "searchreplace visualblocks code fullscreen",
+                 "insertdatetime media table contextmenu paste"
+                ],
+                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+            });
+
+            
+        {/literal}
+    </script>
+    
     <!-- Bootstrap included -->
     {*<link rel="stylesheet" href="{$BASE_URL}/bootstrap/bootstrap.css">
     <script src="{$BASE_URL}/bootstrap/bootstrap.min.js"></script>*}
     
     
     <body>
+        <div class="genpopup"></div>
+        <div class="notepad-window" id="notepad-edit"> {*add-note*}
+            {include file='./ajax/notepad-edit.html'}
+        </div>
+        <div id="notepad-add">
+            <div class="window-header">
+                <div class="save-note item-trans" title="Add Note"></div>
+                <img src="{$BASE_URL}/img/delete.png" class="window-close item-trans" title="Close" />
+            </div>
+            <input type="text" class="note-title" value="the title of my own note" />
+            <textarea class="editor" name="content"></textarea>
+        </div>
+        
+        
+        
+        
         <div class="startpopup"></div>
             {include file="user/user-forms.html"}
             

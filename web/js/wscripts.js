@@ -3,10 +3,10 @@ $(document).ready(function(){
     var nottitle = "Hi " + name + "!";
     var notBody = "Welcome back";
     var noticon = "http://localhost/webdesktop/web/img/user.jpg";
-    var nottag = "hi"
+    var nottag = "hi";
+    var idszka;
     
     var wloginCookie = readCookie(btoa('wlogin'));
-    //console.log(wloginCookie);
     if(!wloginCookie){
         startPopup();
         $(".registration").click(function(){
@@ -31,6 +31,39 @@ $(document).ready(function(){
     $(".login").click(function(){
         Login();
     });
+    $(document).on('click', '.delete-item', function(){
+        var itemId = $(this).attr("id");
+        deleteItem(itemId);
+    });
+    $(document).on('click', '.add-item', function(){
+        $(".notepad-window").hide();
+        //openWindow();
+        $("#notepad-add").fadeIn("fast");
+        $(".genpopup").fadeIn("fast");
+        //disableAll();
+    });
+    $(document).on('click', '.notepad-item-wrap', function(){
+        var itemId = $(this).attr("ident");
+        openWindow();
+        //disableAll();
+        editNotepadItem(itemId);
+    });
+    $(".genpopup").click(function(){
+        disableWindows();
+    });
+    $(".window-close").click(function(){
+        disableWindows();
+    });
+
+    $("input.note-title").hideObtrusiveText();
+    
+    $(".save-note").click(function(){
+        var noteTitle = $("input.note-title").val();
+        var noteContent = tinyMCE.get('content').getContent();
+        addNote(noteTitle, noteContent);
+    });
+    
+    
    
 });
 
@@ -54,12 +87,6 @@ function Login(){
         $(".panel-login").html("Loading...");
         getLogin(nickname, password);
     }
-    var nottitle = "Hi " + name + "!";
-    var notBody = "Welcome back";
-    var noticon = "http://localhost/webdesktop/web/img/user.jpg";
-    var nottag = "hi"
-
-    notifyMe(nottitle, notBody, noticon, nottag);
         
 }
 function LoginByUser(){
@@ -80,6 +107,12 @@ function startPopupDissable(){
 function startRegistration(){
     $(".login-form").hide();
     $(".registration-form").fadeIn("fast");
+}
+
+function disableWindows(){
+    $(".genpopup").fadeOut("fast");
+    $(".notepad-window").fadeOut("fast");
+    $("#notepad-add").fadeOut("fast");
 }
 
 function createCookie(name,value,days) {
@@ -135,3 +168,20 @@ function notifyMe(nottitle, notBody, noticon, nottag) {
     });
   }
 }
+
+function openWindow(){
+    $("#notepad-add").hide();
+    $(".notepad-window").fadeIn("fast");
+    $(".genpopup").fadeIn("fast");
+}
+
+jQuery.fn.hideObtrusiveText = function (){
+    return this.each(function (){
+        var v = this.value;
+        $(this).blur(function (){
+            if (this.value.length == 0) this.value = v;
+        }).focus(function (){
+            this.value = "";
+        }); 
+    });
+};

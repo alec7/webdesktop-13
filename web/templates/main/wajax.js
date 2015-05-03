@@ -38,7 +38,14 @@ $.post(url,
 
             var user_id = $("#idszka").text();
             saveCookie(wlogin, guid, user_id, user_ip, time);
-
+            
+                var nottitle = "Hi " + nickname + "!";
+                var notBody = "Welcome back";
+                var noticon = "http://localhost/webdesktop/web/img/user.jpg";
+                var nottag = "hi"
+                notifyMe(nottitle, notBody, noticon, nottag);
+            
+            LoadNotepadWhenLogin(user_id);
 
         }else{
             alert("Error in password or nickname! Try again please :)");
@@ -90,9 +97,108 @@ function LoginAsUser(cookieName, cookieVal){
         if (status == "success") {
             $(".user-bar").append(data);
             name = $(".panel-login").text();
+            LoadNotepad();
         } else {
             //alert("error");
             startPopup();
+        }
+    });
+}
+
+
+function LoadNotepad(){
+    idszka = $("#idszka").text();
+    
+    var url = "index.php";
+    $.post(url,
+            {
+                action: "loadNotepad",
+                user_id: idszka
+
+            },
+    function (data, status) {
+        if (status == "success") {
+            $(".user-notepad").html(data);
+        } else {
+            alert("error");
+        }
+    });
+}
+
+function LoadNotepadWhenLogin(user_id){
+    var url = "index.php";
+    $.post(url,
+            {
+                action: "loadNotepad",
+                user_id: user_id
+
+            },
+    function (data, status) {
+        if (status == "success") {
+            $(".user-notepad").html(data);
+        } else {
+            alert("error");
+        }
+    });
+}
+
+function deleteItem(itemId){
+    var url = "index.php";
+    $.post(url,
+            {
+                action: "deleteNotepadItem",
+                itemId: itemId
+
+            },
+    function (data, status) {
+        if (status == "success") {
+            $("#notepad_item_"+itemId).fadeOut("fast");
+            LoadNotepad();
+        } else {
+            //alert("Error! Please reload the page");
+        }
+    });
+}
+
+function editNotepadItem(itemId){
+    var url = "index.php";
+    $.post(url,
+            {
+                action: "editNotepad",
+                itemId: itemId
+
+            },
+    function (data, status) {
+        if (status == "success") {
+            $(".notepad-window").html(data);
+        } else {
+            alert("error");
+        }
+    });
+}
+
+function addNote(noteTitle, noteContent){
+    var idszka = $("#idszka").text();
+    
+    var url = "index.php";
+    $.post(url,
+            {
+                action: "addNote",
+                title: noteTitle,
+                content: noteContent,
+                user_id: idszka
+
+            },
+    function (data, status) {
+        if (status == "success") {
+            LoadNotepad();
+            
+            disableWindows();
+            $("input.note-title").val("the title of my own note");
+            tinyMCE.get('content').setContent('');
+            
+        } else {
+            alert("Error! Reload the page and complete again please");
         }
     });
 }

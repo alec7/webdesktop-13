@@ -1,5 +1,25 @@
-<div class="user-panel">
-    <img src="{$BASE_URL}/img/user.jpg" class="user-icon" />
-    <div class="panel-login">{$user.login|truncate:10:"":false}</div>
-    <span id="idszka">{$user.id}</span>
+<div class="user-wrapper">
+    <div class="user-panel">
+        <img src="{$BASE_URL}/img/user.jpg" class="user-icon" />
+        <div class="panel-login">{$user.login|truncate:10:"":false}</div>
+        <span id="idszka">{$user.id}</span>
+    </div>
+    <div class="clear"></div>
+<!--    <div class="user-notepad">
+        <div class="h4">Notepad</div>
+        <div class="notepad-item">
+            tesdt
+        </div>
+        
+    </div>-->
+    <div class="h4">
+        Notebook
+        <img src="{$BASE_URL}/img/add.png" class="add-item item-trans" title="add item" />
+    </div>
+    <div class="user-notepad">
+        Your notebook is empty. You can add new item
+        {include file='./user-notepad.html'}
+    </div>
+    
+    
 </div>
