@@ -1,3 +1,6 @@
+/*
+ * Author: Ivan Dublianskyi 2015
+ */
 function showDropzone(){
     
 }
