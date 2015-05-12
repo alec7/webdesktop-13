@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-05-03 10:56:48
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-05-12 22:03:08
          compiled from "index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2860455325e9a9f64e4-12403151%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '26aa970b2c378f08ce5ee51da90c5e7d5cc28ee5' => 
     array (
       0 => 'index.tpl',
-      1 => 1430643380,
+      1 => 1431460986,
       2 => 'file',
     ),
   ),
@@ -79,8 +79,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 ],
                 toolbar: "insertfile undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent"
             });
-
-            
         
     <?php echo '</script'; ?>
 >
@@ -91,7 +89,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     
     <body>
         <div class="genpopup"></div>
-        <div class="notepad-window" id="notepad-edit"> 
+        <div class="notepad-window" id="notepad-edit">
             <?php echo $_smarty_tpl->getSubTemplate ('./ajax/notepad-edit.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null, array(), 0);?>
 
         </div>
@@ -116,28 +114,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <br />
         <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 ">back to home page</a>
-        
-        
-        
+
 
 <div class="dropzone-wrap"><form class="dropzone" action="<?php echo $_smarty_tpl->tpl_vars['MAIN_URL']->value;?>
 /upload.php" method="post" enctype="multipart/form-data"></form></div>
 
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-
-        <div class="user-bar gradient">
-            
-        </div>
+        <div class="user-bar gradient"></div>
         
         <div class="panel-desktop gradient">
             <div class="panel-activator">

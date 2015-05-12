@@ -40,7 +40,7 @@
     
     <body>
         <div class="genpopup"></div>
-        <div class="notepad-window" id="notepad-edit"> {*add-note*}
+        <div class="notepad-window" id="notepad-edit">
             {include file='./ajax/notepad-edit.html'}
         </div>
         <div id="notepad-add">

@@ -287,6 +287,10 @@ transition: all 100ms ease-out 100ms;
 border: 1px solid #500a7d;
 font-size: 16px;
 }
+.notepad-item.act{
+color: red;
+border: 1px solid #500a7d;
+}
 .notepad-item:hover .delete-item{
 opacity: 0.5;
 }
@@ -446,7 +450,3 @@ text-align: center;
 font: 16px/24px Tahoma;
 font-weight: bold;
 }
-
-
-
-

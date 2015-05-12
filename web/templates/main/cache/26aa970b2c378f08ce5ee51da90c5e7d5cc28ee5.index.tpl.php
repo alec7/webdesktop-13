@@ -5,7 +5,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '26aa970b2c378f08ce5ee51da90c5e7d5cc28ee5' => 
     array (
       0 => 'index.tpl',
-      1 => 1430643380,
+      1 => 1431460986,
       2 => 'file',
     ),
     'a1e986bbba915f5b96d8626d30df4c238c131cee' => 
@@ -23,11 +23,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '2860455325e9a9f64e4-12403151',
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_5545f6327d44a3_59380459',
+  'unifunc' => 'content_5552692da06431_46687215',
   'has_nocache_code' => false,
   'cache_lifetime' => 1,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5545f6327d44a3_59380459')) {function content_5545f6327d44a3_59380459($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5552692da06431_46687215')) {function content_5552692da06431_46687215($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     
@@ -59,8 +59,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 ],
                 toolbar: "insertfile undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent"
             });
-
-            
         
     </script>
     
@@ -70,7 +68,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     
     <body>
         <div class="genpopup"></div>
-        <div class="notepad-window" id="notepad-edit"> 
+        <div class="notepad-window" id="notepad-edit">
             <div class="window-header">
     <img src="http://localhost/webdesktop/web/templates/main/../../img/delete.png" class="window-close item-trans" title="Close" />
 </div>
@@ -109,27 +107,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         http://localhost/webdesktop/web/templates/main
         <br />
         <a href="http://localhost/webdesktop/web/templates/main/../..">back to home page</a>
-        
-        
-        
+
 
 <div class="dropzone-wrap"><form class="dropzone" action="http://localhost/webdesktop/web/templates/main/upload.php" method="post" enctype="multipart/form-data"></form></div>
 
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-
-        <div class="user-bar gradient">
-            
-        </div>
+        <div class="user-bar gradient"></div>
         
         <div class="panel-desktop gradient">
             <div class="panel-activator">

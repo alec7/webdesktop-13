@@ -11,15 +11,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '288555325e9aa65fd6-73004773',
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_554516b507afd0_14064603',
+  'unifunc' => 'content_55466a5d51fde5_70794037',
   'has_nocache_code' => false,
   'cache_lifetime' => 1,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_554516b507afd0_14064603')) {function content_554516b507afd0_14064603($_smarty_tpl) {?><div class="window-header">
+<?php if ($_valid && !is_callable('content_55466a5d51fde5_70794037')) {function content_55466a5d51fde5_70794037($_smarty_tpl) {?><div class="window-header">
     <img src="http://localhost/webdesktop/web/templates/main/../../img/delete.png" class="window-close item-trans" title="Close" />
 </div>
-<div class="note-ttl">M. Wrzesień</div>
-<div class="wind-wrap"><p>Praca dyplomowa - konspekt</p>
-<p>2) SISE</p></div>
+<div class="note-ttl">the title of my own note</div>
+<div class="wind-wrap"><p>dsf sdf s</p></div>
 
     <?php }} ?>

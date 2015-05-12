@@ -171,6 +171,7 @@ function editNotepadItem(itemId){
     function (data, status) {
         if (status == "success") {
             $(".notepad-window").html(data);
+            $(".notepad-item[ident='"+itemId+"']").addClass("act").siblings().removeClass('act');
         } else {
             alert("error");
         }

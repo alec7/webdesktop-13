@@ -123,6 +123,7 @@ function disableWindows(){
     $(".notepad-window").fadeOut("fast");
     $("#notepad-add").fadeOut("fast");
     $("#notepad-edit").fadeOut("fast");
+    $(".notepad-item[ident]").removeClass('act');
 }
 
 function createCookie(name,value,days) {
