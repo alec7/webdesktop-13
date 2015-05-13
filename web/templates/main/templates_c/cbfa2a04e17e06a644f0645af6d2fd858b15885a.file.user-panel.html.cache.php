@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-04-18 15:39:38
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-05-13 12:20:44
          compiled from "ajax\user-panel.html" */ ?>
 <?php /*%%SmartyHeaderCode:1936855325e9adac169-47404498%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cbfa2a04e17e06a644f0645af6d2fd858b15885a' => 
     array (
       0 => 'ajax\\user-panel.html',
-      1 => 1428330334,
+      1 => 1431512442,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55325e9ae1d326_00668754',
   'variables' => 
   array (
     'BASE_URL' => 0,
     'user' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_55325e9ae1d326_00668754',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_55325e9ae1d326_00668754')) {function content_55325e9ae1d326_00668754($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_truncate')) include 'C:\\xampp\\htdocs\\webdesktop\\libs\\plugins\\modifier.truncate.php';
 ?><div class="user-wrapper">
@@ -33,6 +33,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </div>
         <span id="idszka"><?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
 </span>
+    </div>
+    <div class="user-tools">
+        <div class="file-upload" title="file uploader"></div>
     </div>
     <div class="clear"></div>
 <!--    <div class="user-notepad">

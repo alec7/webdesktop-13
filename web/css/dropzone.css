@@ -184,7 +184,7 @@ transform: translate(-50%, -75%);
 width: 10%;
 min-height: 150px;
 margin: 0 auto;
-overflow: hidden;
+overflow: visible;
 }
 .dropzone{
 border-radius: 25px;
@@ -196,11 +196,13 @@ padding: 20px;
 box-sizing: border-box;
 background: rgba(58,46,157,0.5);
 }
-
 .dropzone.hover{
 background: rgba(0,0,0,0.75);
+box-shadow: 0 0 55px 25px rgba(255,255,255,0.5);
 }
-
+.dropzone.droped{
+background: rgba(150,245,5,0.75);
+}
 
 .dropzone.dz-clickable {
     cursor: pointer; }

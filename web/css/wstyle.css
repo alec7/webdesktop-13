@@ -450,3 +450,22 @@ text-align: center;
 font: 16px/24px Tahoma;
 font-weight: bold;
 }
+.user-tools{
+background: rgba(0,0,0,0.75);
+width: 250px;
+height: 75px;
+float: right;
+box-sizing: border-box;
+padding: 5px;
+}
+.file-upload{
+width: 35px;
+height: 25px;
+display: inline-block;
+background: url(../img/upload.png) no-repeat;
+background-size: contain;
+}
+.file-upload:hover{
+background: url(../img/upload2.png) no-repeat;
+background-size: contain;
+}

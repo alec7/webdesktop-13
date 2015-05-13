@@ -11,11 +11,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '582555325e9ae31945-10129625',
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_5552692dd02ad0_37630417',
+  'unifunc' => 'content_5553288f14cc94_54650440',
   'has_nocache_code' => false,
   'cache_lifetime' => 1,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5552692dd02ad0_37630417')) {function content_5552692dd02ad0_37630417($_smarty_tpl) {?>    <div class="notepad-item" id="notepad_item_141" ident="141" title="">
+<?php if ($_valid && !is_callable('content_5553288f14cc94_54650440')) {function content_5553288f14cc94_54650440($_smarty_tpl) {?>    <div class="notepad-item" id="notepad_item_141" ident="141" title="">
         <div class="notepad-item-wrap" id="notepad_item_141" ident="141"></div>
             the title of my own note
         <div class="delete-item" id="141" title="delete item"></div>
