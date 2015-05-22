@@ -1,3 +1,4 @@
+var user_ip;
 function getLogin(nickname, password){
     var url = "index.php";
 $.post(url,
@@ -28,7 +29,9 @@ $.post(url,
             $.getJSON("http://jsonip.appspot.com?callback=?",
                 function(data){
                     user_ip = data.ip;
+                    
                     return user_ip;
+                    
                 });
             
             var guid = guid();

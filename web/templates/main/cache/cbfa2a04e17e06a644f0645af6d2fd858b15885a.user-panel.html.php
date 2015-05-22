@@ -5,7 +5,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cbfa2a04e17e06a644f0645af6d2fd858b15885a' => 
     array (
       0 => 'ajax\\user-panel.html',
-      1 => 1431512442,
+      1 => 1431513379,
       2 => 'file',
     ),
     'd2d69eee40bada4a1429c3887aa415d56d2b3245' => 
@@ -17,11 +17,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '1936855325e9adac169-47404498',
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_5553288f09b836_04124431',
+  'unifunc' => 'content_555cc78edaaa03_78545419',
   'has_nocache_code' => false,
   'cache_lifetime' => 1,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5553288f09b836_04124431')) {function content_5553288f09b836_04124431($_smarty_tpl) {?><div class="user-wrapper">
+<?php if ($_valid && !is_callable('content_555cc78edaaa03_78545419')) {function content_555cc78edaaa03_78545419($_smarty_tpl) {?><div class="user-wrapper">
     <div class="user-panel">
         <img src="http://localhost/webdesktop/web/templates/main/../../img/user.jpg" class="user-icon" />
         <div class="panel-login">ivan</div>

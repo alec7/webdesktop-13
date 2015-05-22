@@ -34,10 +34,6 @@ if (changes == true){
     });
 }
 
-
-
-
-
     $('.dropzone').html("<div class='closeDropzone'></div>");
     $(".closeDropzone").click(function(){
             $('.dropzone-wrap').animate({

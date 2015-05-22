@@ -21,8 +21,8 @@ $smarty->assign('MAIN_URL', $MAIN_URL);
 $BASE_URL = $MAIN_URL."/../..";
 $smarty->assign('BASE_URL', $BASE_URL);
 
-$error = "Coś tu jest kurwa";
-$smarty->assign('error', $error);
+//$error = "Coś tu jest kurwa";
+//$smarty->assign('error', $error);
 
 //$date = date('Y-m-d', time()); //date('m/d/Y h:i:s a', time());
 //$oDesktop->ClearCookiesTable($date);
@@ -122,10 +122,7 @@ if (isset($_POST)){
             //$smarty->assign('error', "You have no items in notebook");
             die();
         }
-    }
- 
-    
-    
+    } 
 }
 
 

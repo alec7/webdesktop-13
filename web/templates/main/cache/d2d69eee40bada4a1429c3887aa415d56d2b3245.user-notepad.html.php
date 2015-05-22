@@ -11,18 +11,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '582555325e9ae31945-10129625',
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_5553288f14cc94_54650440',
+  'unifunc' => 'content_555cc78ee92f38_00621428',
   'has_nocache_code' => false,
   'cache_lifetime' => 1,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5553288f14cc94_54650440')) {function content_5553288f14cc94_54650440($_smarty_tpl) {?>    <div class="notepad-item" id="notepad_item_141" ident="141" title="">
-        <div class="notepad-item-wrap" id="notepad_item_141" ident="141"></div>
-            the title of my own note
-        <div class="delete-item" id="141" title="delete item"></div>
+<?php if ($_valid && !is_callable('content_555cc78ee92f38_00621428')) {function content_555cc78ee92f38_00621428($_smarty_tpl) {?>    <div class="notepad-item" id="notepad_item_149" ident="149" title="">
+        <div class="notepad-item-wrap" id="notepad_item_149" ident="149"></div>
+            sdds fdsf ds fds sdds fdsf ds fds sdds fdsf
+        <div class="delete-item" id="149" title="delete item"></div>
     </div>
-    <div class="notepad-item" id="notepad_item_140" ident="140" title="dsf sdf s">
-        <div class="notepad-item-wrap" id="notepad_item_140" ident="140"></div>
+    <div class="notepad-item" id="notepad_item_148" ident="148" title="">
+        <div class="notepad-item-wrap" id="notepad_item_148" ident="148"></div>
             the title of my own note
-        <div class="delete-item" id="140" title="delete item"></div>
+        <div class="delete-item" id="148" title="delete item"></div>
+    </div>
+    <div class="notepad-item" id="notepad_item_147" ident="147" title="">
+        <div class="notepad-item-wrap" id="notepad_item_147" ident="147"></div>
+            fifth note
+        <div class="delete-item" id="147" title="delete item"></div>
+    </div>
+    <div class="notepad-item" id="notepad_item_143" ident="143" title="and this should be the content of my own note">
+        <div class="notepad-item-wrap" id="notepad_item_143" ident="143"></div>
+            my first test note
+        <div class="delete-item" id="143" title="delete item"></div>
     </div>
 <?php }} ?>
