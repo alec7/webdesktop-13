@@ -21,7 +21,7 @@ $smarty->assign('MAIN_URL', $MAIN_URL);
 $BASE_URL = $MAIN_URL."/../..";
 $smarty->assign('BASE_URL', $BASE_URL);
 
-//$error = "Coś tu jest kurwa";
+//$error = "Coś tu jest";
 //$smarty->assign('error', $error);
 
 //$date = date('Y-m-d', time()); //date('m/d/Y h:i:s a', time());

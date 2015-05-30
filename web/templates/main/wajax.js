@@ -1,4 +1,4 @@
-var user_ip;
+//var user_ip;
 function getLogin(nickname, password){
     var url = "index.php";
 $.post(url,
@@ -58,12 +58,6 @@ $.post(url,
       }
     });
   }
-
-
-
-
-
-
 
 
 function saveCookie(wlogin, guid, user_id, user_ip, time){
