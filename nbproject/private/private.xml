@@ -2,18 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/xampp/htdocs/webdesktop/web/templates/main/index.tpl</file>
-            <file>file:/C:/xampp/htdocs/webdesktop/web/js/dndfunctions.js</file>
-            <file>file:/C:/xampp/htdocs/webdesktop/web/css/dropzone.css</file>
-            <file>file:/C:/xampp/htdocs/webdesktop/web/templates/main/upload.php</file>
-            <file>file:/C:/xampp/htdocs/webdesktop/web/css/fonts.css</file>
-            <file>file:/C:/xampp/htdocs/webdesktop/web/templates/main/index.php</file>
-            <file>file:/C:/xampp/htdocs/webdesktop/web/css/wstyle.css</file>
-            <file>file:/C:/xampp/htdocs/webdesktop/web/includes/login.class.php</file>
-            <file>file:/C:/xampp/htdocs/webdesktop/web/js/dropzone.js</file>
-            <file>file:/C:/xampp/htdocs/webdesktop/web/templates/main/wajax.js</file>
-            <file>file:/C:/xampp/htdocs/webdesktop/web/js/wscripts.js</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
