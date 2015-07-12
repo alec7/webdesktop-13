@@ -55,6 +55,12 @@ if (isset($_POST)){
             die();
         }
     }
+//    if ($_POST['action'] == 'updateCookiesTable') {
+//        if($oLogin->updateCookieTable($_POST)){
+//            die();
+//        }
+//    }
+    
     if ($_POST['action'] == 'loadByCookie') {
         if($user = $oLogin->loginByCookie($_POST)){
             $smarty->assign('user', $user);

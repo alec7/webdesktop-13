@@ -30,10 +30,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '2023654fb8b2899da52-60148829',
   'cache_lifetime' => 1,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_55a24a418d0a82_58108222',
+  'unifunc' => 'content_55a249365b3064_08587892',
   'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55a24a418d0a82_58108222')) {function content_55a24a418d0a82_58108222($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_55a249365b3064_08587892')) {function content_55a249365b3064_08587892($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
         <title>V Desktop start page</title>
@@ -42,13 +42,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <meta name="keywords" content="" />
     <meta name="description" content="" />
         
-    <link rel="stylesheet" type="text/css" href="http://localhost/webdesktop/web/css/style.css" />
-    <script type="text/javascript" src="http://localhost/webdesktop/web/js/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="http://localhost/webdesktop/web/js/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://localhost/webdesktop/web/index.php/bootstrap/bootstrap/css/style.css" />
+    <script type="text/javascript" src="http://localhost/webdesktop/web/index.php/bootstrap/bootstrap/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="http://localhost/webdesktop/web/index.php/bootstrap/bootstrap/js/scripts.js"></script>
     
     <!-- Bootstrap included -->
-    <link rel="stylesheet" href="http://localhost/webdesktop/web/bootstrap/bootstrap.css">
-    <script src="http://localhost/webdesktop/web/bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webdesktop/web/index.php/bootstrap/bootstrap/bootstrap/bootstrap.css">
+    <script src="http://localhost/webdesktop/web/index.php/bootstrap/bootstrap/bootstrap/bootstrap.min.js"></script>
 </head> 
     
 <body>
@@ -56,10 +56,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     
     
-    http://localhost/webdesktop/web
+    http://localhost/webdesktop/web/index.php/bootstrap/bootstrap
     <br />
     Welcome in V CMS. This is beta version!!! Don't worry. I'll perfecting it!<br />
-    You are in main file directory -> index.tpl. And that is a link to subpage: <a href="http://localhost/webdesktop/web/templates/main"> ----------LINK---------- </a> <br />
+    You are in main file directory -> index.tpl. And that is a link to subpage: <a href="http://localhost/webdesktop/web/index.php/bootstrap/bootstrap/templates/main"> ----------LINK---------- </a> <br />
     (I hope it will not be necessary).
     
         <br />Anyway, you have base css, jquery.min.js and Bootstrap included.

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-05-13 15:09:05
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-07-12 13:45:35
          compiled from "index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2860455325e9a9f64e4-12403151%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '26aa970b2c378f08ce5ee51da90c5e7d5cc28ee5' => 
     array (
       0 => 'index.tpl',
-      1 => 1431513377,
+      1 => 1436701508,
       2 => 'file',
     ),
   ),
@@ -36,6 +36,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
+    <link rel="shortcut icon" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/img/favicon.ico" />
+ 
         
     <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 /css/wstyle.css" />
@@ -120,7 +123,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /upload.php" method="post" enctype="multipart/form-data"></form></div>
 
 
-        <div class="user-bar gradient"></div>
+        <div class="user-bar"></div>
         
         <div class="panel-desktop gradient">
             <div class="panel-activator">

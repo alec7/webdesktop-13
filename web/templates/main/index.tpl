@@ -7,6 +7,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
+    <link rel="shortcut icon" href="{$BASE_URL}/img/favicon.ico" />
+ 
         
     <link rel="stylesheet" type="text/css" href="{$BASE_URL}/css/wstyle.css" />
     <script defer type="text/javascript" src="{$BASE_URL}/js/jquery-1.11.2.min.js"></script>
@@ -64,7 +66,7 @@
 <div class="dropzone-wrap"><form class="dropzone" action="{$MAIN_URL}/upload.php" method="post" enctype="multipart/form-data"></form></div>
 
 
-        <div class="user-bar gradient"></div>
+        <div class="user-bar"></div>
         
         <div class="panel-desktop gradient">
             <div class="panel-activator">

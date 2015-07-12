@@ -25,7 +25,8 @@ $(document).ready(function(){
         $(".desktop").fadeIn("fast"); 
         $(".panel-desktop").toggleClass("click");
         $(this).toggleClass("act");
-        $(".user-bar").toggle('slide');
+        //$(".user-bar").toggle('slide');
+        $(".user-bar").toggleClass("active");
     });
     $(".desktop").click(function(){
         disableAll();

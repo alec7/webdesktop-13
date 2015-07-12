@@ -224,28 +224,40 @@ margin-top: 11px;
 margin-top: 15px;
 }
 .user-bar{
-border: 1px solid white;
-width: 350px;
-height: 400px;
-position: fixed;
-bottom: 70px;
-display: none;
-z-index: 3;
-box-shadow: 0 0 20px 5px rgba(255,255,255,0.75);
+  border: 1px solid white;
+  box-sizing: border-box;
+  width: 350px;
+  height: calc(100% - 69px);
+  position: fixed;
+  bottom: 67px;
+  z-index: 3;
+  background: rgba(0,0,0,0.85);
+  transition: all 200ms linear;
+  transform: translate(-350px, 0%);
+}
+.user-bar.active{
+transform: translate(0px, 0%);
+}
+.user-bar *{
+box-sizing: border-box;
 }
 .user-wrapper{
 width: 100%;
-display: inline-block; /*height: 75px;*/
+display: inline-block;
 }
 .panel-login{
 display: block;
 }
 .user-panel{
-width: 55px;
-padding: 3px;
-text-align: center;
-overflow: hidden;
-float: left;
+  float: left;
+  padding: 3px;
+  overflow: hidden;
+  text-align: center;
+}
+.user-tools{
+  width: 215px;
+  height: 50px;
+  float: right;
 }
 .user-icon{
 border-radius: 50%;
@@ -449,14 +461,6 @@ margin-left: 5px;
 text-align: center;
 font: 16px/24px Tahoma;
 font-weight: bold;
-}
-.user-tools{
-background: rgba(0,0,0,0.75);
-width: 250px;
-height: 75px;
-float: right;
-box-sizing: border-box;
-padding: 5px;
 }
 .file-upload{
 width: 35px;

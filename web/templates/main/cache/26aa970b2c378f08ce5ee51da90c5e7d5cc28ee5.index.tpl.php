@@ -5,7 +5,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '26aa970b2c378f08ce5ee51da90c5e7d5cc28ee5' => 
     array (
       0 => 'index.tpl',
-      1 => 1431513377,
+      1 => 1436701508,
       2 => 'file',
     ),
     'a1e986bbba915f5b96d8626d30df4c238c131cee' => 
@@ -23,11 +23,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '2860455325e9a9f64e4-12403151',
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_5569d5cca14971_38204398',
+  'unifunc' => 'content_55a258b97ca604_93334576',
   'has_nocache_code' => false,
   'cache_lifetime' => 1,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5569d5cca14971_38204398')) {function content_5569d5cca14971_38204398($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_55a258b97ca604_93334576')) {function content_55a258b97ca604_93334576($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     
@@ -36,6 +36,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
+    <link rel="shortcut icon" href="http://localhost/webdesktop/web/templates/main/../../img/favicon.ico" />
+ 
         
     <link rel="stylesheet" type="text/css" href="http://localhost/webdesktop/web/templates/main/../../css/wstyle.css" />
     <script defer type="text/javascript" src="http://localhost/webdesktop/web/templates/main/../../js/jquery-1.11.2.min.js"></script>
@@ -112,7 +114,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div class="dropzone-wrap"><form class="dropzone" action="http://localhost/webdesktop/web/templates/main/upload.php" method="post" enctype="multipart/form-data"></form></div>
 
 
-        <div class="user-bar gradient"></div>
+        <div class="user-bar"></div>
         
         <div class="panel-desktop gradient">
             <div class="panel-activator">
