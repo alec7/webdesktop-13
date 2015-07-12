@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-07-12 13:45:35
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-07-12 18:59:48
          compiled from "index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2860455325e9a9f64e4-12403151%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1039155a29d040f38a4-81309372%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '26aa970b2c378f08ce5ee51da90c5e7d5cc28ee5' => 
     array (
       0 => 'index.tpl',
-      1 => 1436701508,
+      1 => 1436717569,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2860455325e9a9f64e4-12403151',
+  'nocache_hash' => '1039155a29d040f38a4-81309372',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_55325e9aa50c01_46381224',
   'variables' => 
   array (
     'title' => 0,
@@ -25,8 +23,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'error' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55a29d04150d01_07971655',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55325e9aa50c01_46381224')) {function content_55325e9aa50c01_46381224($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_55a29d04150d01_07971655')) {function content_55a29d04150d01_07971655($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     
@@ -121,7 +121,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <div class="dropzone-wrap"><form class="dropzone" action="<?php echo $_smarty_tpl->tpl_vars['MAIN_URL']->value;?>
 /upload.php" method="post" enctype="multipart/form-data"></form></div>
-
+<div class="ip-sprawdzenie" style="background: red; width: 25px; height: 25px;"></div>
 
         <div class="user-bar"></div>
         

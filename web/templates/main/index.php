@@ -4,6 +4,7 @@ require_once '../../includes/user.class.php';
 require '../../../libs/Smarty.class.php';
 require_once '../../includes/desktop.class.php';
 require_once '../../includes/login.class.php';
+require_once '../../includes/ip.class.php';
 
 $smarty = new Smarty;
 $oUser = new User;
@@ -37,6 +38,8 @@ function dump($value) {
     print_r($value);
     echo '</pre>';
 }
+$ipAddress = get_ip_address();
+
 
 if (isset($_POST)){
 //dump($_POST);die();
@@ -51,10 +54,23 @@ if (isset($_POST)){
         }
     }
     if ($_POST['login'] == 'saveCookie') {
-        if($oLogin->saveCookie($_POST)){
+        if($oLogin->saveCookie($_POST, $ipAddress)){
             die();
         }
     }
+    
+    if ($_POST['action'] == 'checkIpAddress') {
+        if($oLogin->checkIpAddress($_POST)){
+            echo "true";
+            return true;
+            die();
+        }else{
+            echo "false";
+            return false;
+            die();
+        }
+    }
+    
 //    if ($_POST['action'] == 'updateCookiesTable') {
 //        if($oLogin->updateCookieTable($_POST)){
 //            die();

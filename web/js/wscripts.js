@@ -1,6 +1,7 @@
 /*
  * @Author: Ivan Dublianski 2015
  */
+var ip;
 $(document).ready(function(){
     
     var nottitle = "Hi " + name + "!";
@@ -16,8 +17,13 @@ $(document).ready(function(){
             startRegistration();
         });
     }else{
+        $.getJSON('getip.php', function (data) {
+            ip = data.ip;
+            checkIpAddress(ip);
+        });
+        //LoginByUser(); // LogIn without checking IP address
+
         //eraseCookie(btoa('wlogin'));
-        LoginByUser();
         //notifyMe(nottitle, notBody, noticon, nottag);
     }
     
@@ -80,7 +86,7 @@ $(document).ready(function(){
 function disableAll(){
     $(".panel-activator").removeClass("act");
     $(".panel-desktop").removeClass("click");
-    $(".user-bar").hide("slide");
+    $(".user-bar").removeClass("active");
     $(".desktop").fadeOut("fast");
     
 }
@@ -197,3 +203,35 @@ jQuery.fn.hideObtrusiveText = function (){
         }); 
     });
 };
+
+function checkIpAddress(ip){
+    var cookieVal = readCookie(btoa('wlogin'));
+    var cookieName = btoa('wlogin');
+    //var result = ajaxCheckIpAddress(cookieName, cookieVal, ip);
+    
+    
+    var url = "index.php";
+    $.post(url,
+            {
+                action: "checkIpAddress",
+                cookieName: cookieName,
+                cookieVal: cookieVal,
+                ip: ip
+            },
+    function (data, status) {
+        if (status == "success") {
+            if(data == "true"){
+                LoginByUser();
+            }else{
+                eraseCookie(btoa('wlogin'));
+                startPopup();
+            }
+        } else {
+            eraseCookie(btoa('wlogin'));
+            startPopup();
+            return false;
+        }
+    });
+    
+
+}

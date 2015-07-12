@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-07-12 14:00:01
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-07-12 18:59:48
          compiled from "ajax\user-panel.html" */ ?>
-<?php /*%%SmartyHeaderCode:1936855325e9adac169-47404498%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1780355a29d04764ae1-71346585%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,20 +11,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1936855325e9adac169-47404498',
+  'nocache_hash' => '1780355a29d04764ae1-71346585',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_55325e9ae1d326_00668754',
   'variables' => 
   array (
     'BASE_URL' => 0,
     'user' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55a29d047dcf37_45172117',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55325e9ae1d326_00668754')) {function content_55325e9ae1d326_00668754($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_truncate')) include 'C:\\xampp\\htdocs\\webdesktop\\libs\\plugins\\modifier.truncate.php';
+<?php if ($_valid && !is_callable('content_55a29d047dcf37_45172117')) {function content_55a29d047dcf37_45172117($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_truncate')) include 'C:\\xampp\\htdocs\\webdesktop\\libs\\plugins\\modifier.truncate.php';
 ?><div class="user-wrapper">
     <div class="user-panel">
         <img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>

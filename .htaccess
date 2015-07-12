@@ -3,7 +3,7 @@ RewriteEngine on
 php_flag magic_quotes_gpc off
 php_flag register_globals off
 
-php_flag display_startup_errors of
-php_flag display_errors of
-php_flag html_errors of
-php_flag log_errors of
+php_flag display_startup_errors off
+php_flag display_errors off
+php_flag html_errors off
+php_flag log_errors off

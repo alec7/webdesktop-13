@@ -24,15 +24,6 @@ $.post(url,
                 return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
                         s4() + '-' + s4() + s4() + s4();
             }
- 
-            var user_ip;
-            $.getJSON("http://jsonip.appspot.com?callback=?",
-                function(data){
-                    user_ip = data.ip;
-                    
-                    return user_ip;
-                    
-                });
             
             var guid = guid();
             var time = 4;
@@ -40,7 +31,7 @@ $.post(url,
             createCookie(wlogin, guid, time); //time in days
 
             var user_id = $("#idszka").text();
-            saveCookie(wlogin, guid, user_id, user_ip, time);
+            saveCookie(wlogin, guid, user_id, time);
             
                 var nottitle = "Hi " + nickname + "!";
                 var notBody = "Welcome back";
