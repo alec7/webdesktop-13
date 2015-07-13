@@ -1,6 +1,7 @@
 # webdesktop
-> This is an internet application to saving and editing users files with advanced options. It's single page application based on ajax, angularJS and PHP as server part of application.
-> User has a user bar panel with notepad, his data and management tools. User can to upload files by drag-and-drop method and see the results of uploading.
+> This is an internet application to saving and editing users files with advanced options. It's single page application based on ajax, angularJS and PHP as server part of application.   
+> User has a user bar panel with notepad, his data and management tools. User can to upload files by drag-and-drop method and see the results of uploading.   
+
 
 ## Security elements
 
