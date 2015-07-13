@@ -4,8 +4,9 @@
 
 
 ##### Base64:
-###### btoa(); // encode to base64
-###### atob(); //decode base64
+###### btoa(); // encode to base64 (function in js)
+###### atob(); //decode base64 (function in js)
+> The data is encoding to base64 before sending to server or user.
 
 
 #### MD5:
