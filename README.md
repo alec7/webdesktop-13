@@ -15,3 +15,4 @@
 #### Cookies:
 ###### Creating 3 days cookie for user IP address; 
 ###### Cookie value is only guid - 128-bit identification (32 characters)
+> Cookie name is encoded to base64
