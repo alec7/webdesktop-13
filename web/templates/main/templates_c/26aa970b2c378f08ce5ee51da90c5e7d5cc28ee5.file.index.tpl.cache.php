@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-07-12 18:59:48
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-07-12 19:06:59
          compiled from "index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1039155a29d040f38a4-81309372%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '26aa970b2c378f08ce5ee51da90c5e7d5cc28ee5' => 
     array (
       0 => 'index.tpl',
-      1 => 1436717569,
+      1 => 1436720612,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55a29d04150d01_07971655',
   'variables' => 
   array (
     'title' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'error' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_55a29d04150d01_07971655',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_55a29d04150d01_07971655')) {function content_55a29d04150d01_07971655($_smarty_tpl) {?><!DOCTYPE html>
 <html>
@@ -121,7 +121,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <div class="dropzone-wrap"><form class="dropzone" action="<?php echo $_smarty_tpl->tpl_vars['MAIN_URL']->value;?>
 /upload.php" method="post" enctype="multipart/form-data"></form></div>
-<div class="ip-sprawdzenie" style="background: red; width: 25px; height: 25px;"></div>
+
 
         <div class="user-bar"></div>
         

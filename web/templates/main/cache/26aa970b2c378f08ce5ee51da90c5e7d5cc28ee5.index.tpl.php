@@ -5,7 +5,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '26aa970b2c378f08ce5ee51da90c5e7d5cc28ee5' => 
     array (
       0 => 'index.tpl',
-      1 => 1436717569,
+      1 => 1436720612,
       2 => 'file',
     ),
     'a1e986bbba915f5b96d8626d30df4c238c131cee' => 
@@ -23,11 +23,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '1039155a29d040f38a4-81309372',
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_55a29d718bfb41_11976907',
+  'unifunc' => 'content_55a29eb3a9e4c3_20585253',
+  'variables' => 
+  array (
+    'title' => 0,
+    'BASE_URL' => 0,
+    'MAIN_URL' => 0,
+    'error' => 0,
+  ),
   'has_nocache_code' => false,
   'cache_lifetime' => 1,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55a29d718bfb41_11976907')) {function content_55a29d718bfb41_11976907($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_55a29eb3a9e4c3_20585253')) {function content_55a29eb3a9e4c3_20585253($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     
@@ -112,7 +119,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
 <div class="dropzone-wrap"><form class="dropzone" action="http://localhost/webdesktop/web/templates/main/upload.php" method="post" enctype="multipart/form-data"></form></div>
-<div class="ip-sprawdzenie" style="background: red; width: 25px; height: 25px;"></div>
+
 
         <div class="user-bar"></div>
         
