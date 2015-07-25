@@ -28,6 +28,20 @@ color: white;
 .clear{
 clear: both;
 }
+.trans200{
+transition: all 200ms linear;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+}
+.trans-bez-250{
+transition: all 250ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    -webkit-transition: all 250ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    -moz-transition: all 250ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    -ms-transition: all 250ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    -o-transition: all 250ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
+}
 .h4{
 width: 100%;
 color: red !important;
@@ -97,7 +111,6 @@ width: 175px;
 height: 35px;
 margin-left: 10px;
 color: black;
-transition: 200ms;
 border: 1px solid #c2c2c2;
 border-radius: 50px;
 box-shadow: none;
@@ -122,7 +135,7 @@ padding: 5px;
 font: 20px/20px Tahoma;
 text-align: center;
 cursor: pointer;
-transition: all 250ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
+
 float: left;
 margin-right: 13px;
 margin-bottom: 7px;
@@ -146,7 +159,6 @@ width: 100%;
 height: 25px;
 position: fixed;
 bottom: 0;
-transition: 200ms;
 }
 .gradient{
 will-change: opacity;
@@ -174,7 +186,7 @@ left: 4px;
 cursor: pointer;
 display: block;
 text-align: center;
-transition: 175ms;
+/*transition: 175ms;*/
 z-index: 1;
 
 clear: both;
@@ -208,10 +220,10 @@ transition-delay: 250ms;
 color: black;
 width: 55px;
 height: 55px;
--ms-transform: rotate(360deg); /* IE 9 */
--webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+-ms-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
 transform: rotate(360deg);
-
 }
 .panel-activator div{
 display: inline-block;
@@ -232,7 +244,6 @@ margin-top: 15px;
   bottom: 67px;
   z-index: 3;
   background: rgba(0,0,0,0.85);
-  transition: all 200ms linear;
   transform: translate(-350px, 0%);
 }
 .user-bar.active{
@@ -472,4 +483,41 @@ background-size: contain;
 .file-upload:hover{
 background: url(../img/upload2.png) no-repeat;
 background-size: contain;
+}
+
+/* Default class applied to drop zones on over (Angular uploader styles) */
+.angular-user-uploader{
+border: 1px solid white;
+width: 0;
+height: calc(100% - 69px);
+position: fixed;
+bottom: 67px;
+right: -2px;
+display: inline-flex;
+z-index: 3;
+background: rgba(0,0,0,0.85);
+z-index: 10;
+will-change: opacity;
+}
+.angular-user-uploader.act{
+width: calc(100% - 350px);
+right: 0px;
+}
+.drophere{
+padding: 75px 0;
+margin-bottom: 20px;
+background-color: #f5f5f5;
+border: 1px solid transparent;
+border-radius: 5px;
+color: black;
+border: dotted 3px lightgray;
+font-size: 14px;
+text-align: center;
+}
+.drophere.act{
+color: red;
+}
+.my-drop-zone{}
+.nv-file-over{
+border: dotted 3px red;
 }

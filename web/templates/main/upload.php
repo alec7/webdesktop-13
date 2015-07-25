@@ -1,21 +1,19 @@
 <?php
 
-function dump($value) {
-    echo '<pre style="color: red;">';
-    print_r($value);
-    echo '</pre>';
+if ( !empty( $_FILES ) ) {
+
+    $tempPath = $_FILES[ 'file' ][ 'tmp_name' ];
+    $uploadPath = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $_FILES[ 'file' ][ 'name' ];
+
+    move_uploaded_file( $tempPath, $uploadPath );
+
+    $answer = array( 'answer' => 'File transfer completed' );
+    $json = json_encode( $answer );
+
+    echo $json;
+
+} else {
+
+    echo 'No files';
+
 }
-
-
-move_uploaded_file(
-  $_FILES["file"]["tmp_name"],
-    'uploads/' . $_FILES["file"]["name"]
-);
-
-
-
-
-
-dump($_POST);
-dump($_FILES);
-die();

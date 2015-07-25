@@ -3,6 +3,7 @@
  */
 var ip;
 $(document).ready(function(){
+    var htmldoc = $('html');
     
     var nottitle = "Hi " + name + "!";
     var notBody = "Welcome back";
@@ -76,9 +77,24 @@ $(document).ready(function(){
         addNote(noteTitle, noteContent);
     });
     
+    $(document).on('click', '.file-upload', function(){
+        $(".angular-user-uploader").addClass("act");
+    });
 
+    htmldoc.bind('dragenter', function(){
+        $('.angular-user-uploader').addClass("act");
+    });
+    
+    htmldoc.bind('dragleave', function(){
+        $('.angular-user-uploader').removeClass("act");
+    });
 
-
+    $('.drophere').bind('dragenter', function(){
+        console.log("eee");
+        $(this).addClass("act");
+    }, function(){
+        $(this).removeClass("act");
+    });
  
    
 });
@@ -88,7 +104,7 @@ function disableAll(){
     $(".panel-desktop").removeClass("click");
     $(".user-bar").removeClass("active");
     $(".desktop").fadeOut("fast");
-    
+    $(".angular-user-uploader").removeClass("act");
 }
 
 
