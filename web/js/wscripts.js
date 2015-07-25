@@ -77,6 +77,8 @@ $(document).ready(function(){
         addNote(noteTitle, noteContent);
     });
     
+    
+    /* actions for angular uploader */
     $(document).on('click', '.file-upload', function(){
         $(".angular-user-uploader").addClass("act");
     });
@@ -89,13 +91,20 @@ $(document).ready(function(){
         $('.angular-user-uploader').removeClass("act");
     });
 
+    var droptxt;
     $('.drophere').bind('dragenter', function(){
-        console.log("eee");
-        $(this).addClass("act");
-    }, function(){
-        $(this).removeClass("act");
+        droptxt = $(this).text();
+        $(this).text("Put it here");
     });
- 
+    $('.drophere').bind('dragleave', function(){
+        $(this).text(droptxt);
+    });
+    $('.drophere').bind('drop', function(){
+        $(this).text(droptxt);
+        $(".desktop").fadeIn("fast"); 
+    });
+    
+    /* actions for angular uploader  stop */
    
 });
 

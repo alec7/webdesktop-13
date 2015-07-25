@@ -73,10 +73,7 @@
         {*<div class="dropzone-wrap">
             <form class="dropzone" action="{$MAIN_URL}/upload.php" method="post" enctype="multipart/form-data"></form>
         </div>*}
-        
-        
-        
-        
+
         <div class="angular-user-uploader trans200">
             {literal}
                 <div class="container">
@@ -163,11 +160,6 @@
                 </div>
             {/literal}
         </div>
-        
-        
-        
-        
-
 
         <div class="user-bar trans200"></div>
         
