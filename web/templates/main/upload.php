@@ -13,7 +13,5 @@ if ( !empty( $_FILES ) ) {
     echo $json;
 
 } else {
-
     echo 'No files';
-
 }
