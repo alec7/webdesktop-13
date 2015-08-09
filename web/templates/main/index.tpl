@@ -40,9 +40,9 @@
     </script>
     
     
-        <script defer type="text/javascript" src="{$BASE_URL}/js/angular.min.js"></script>
-        <script defer src="angular-file-upload.js"></script>
-        <script defer src="controllers.js"></script>
+    <script defer type="text/javascript" src="{$BASE_URL}/js/angular.min.js"></script>
+    <script defer src="./angular-file-upload.js"></script>
+    <script defer src="./controllers.js"></script>
     
     
     
@@ -68,8 +68,8 @@
         {$MAIN_URL}
         <br />
         <a href="{$BASE_URL}">back to home page</a>
-
-
+        
+        
         {*<div class="dropzone-wrap">
             <form class="dropzone" action="{$MAIN_URL}/upload.php" method="post" enctype="multipart/form-data"></form>
         </div>*}
