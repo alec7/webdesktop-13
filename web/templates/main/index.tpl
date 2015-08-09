@@ -12,7 +12,7 @@
         
     <link rel="stylesheet" type="text/css" href="{$BASE_URL}/css/wstyle.css" />
     <link rel="stylesheet" href="{$BASE_URL}/bootstrap/bootstrap.css" />
-    <script defer type="text/javascript" src="{$BASE_URL}/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="{$BASE_URL}/js/jquery-1.11.2.min.js"></script>
 
     <script defer src="{$BASE_URL}/bootstrap/bootstrap.min.js"></script>
     
@@ -122,7 +122,7 @@
                                             <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
                                         </td>
                                         <td nowrap>
-                                            <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                            <button type="button" class="btn btn-success btn-xs upl" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
                                                 <span class="glyphicon glyphicon-upload"></span> Upload
                                             </button>
                                             <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
@@ -143,7 +143,7 @@
                                         <div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"></div>
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-success btn-s" ng-click="uploader.uploadAll()" ng-disabled="!uploader.getNotUploadedItems().length">
+                                <button type="button" class="btn btn-success btn-s upl" ng-click="uploader.uploadAll()" ng-disabled="!uploader.getNotUploadedItems().length">
                                     <span class="glyphicon glyphicon-upload"></span> Upload all
                                 </button>
                                 <button type="button" class="btn btn-warning btn-s" ng-click="uploader.cancelAll()" ng-disabled="!uploader.isUploading">
@@ -171,6 +171,9 @@
         
         <div class="desktop"></div>
         <div class="error">{$error}</div>
+        <div id="uuu"></div>
+        
+        
     </body>
 </html>
 

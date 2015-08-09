@@ -14,6 +14,16 @@
 
 var module = angular.module('angularFileUpload', []);
 
+var userId;
+//userId = $("#uuu").text();
+//
+//if(userId == ""){
+//    userId = readCookie(btoa('wlogin'));
+//}
+userId = readCookie(btoa('wlogin'));
+
+
+
 'use strict';
 
 /**
@@ -41,7 +51,8 @@ module
         removeAfterUpload: false,
         method: 'POST',
         filters: [],
-        formData: [],
+        formData: [{userId: userId}],
+        //formData: [],
         queueLimit: Number.MAX_VALUE,
         withCredentials: false
     })

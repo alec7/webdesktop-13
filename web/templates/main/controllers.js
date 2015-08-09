@@ -6,6 +6,9 @@ angular
         var uploader = $scope.uploader = new FileUploader({
             url: 'upload.php'
         });
+        
+
+        
         // FILTERS
         uploader.filters.push({
             name: 'customFilter',

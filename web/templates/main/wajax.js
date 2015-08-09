@@ -31,16 +31,17 @@ $.post(url,
             createCookie(wlogin, guid, time); //time in days
 
             var user_id = $("#idszka").text();
+            $("#uuu").text(user_id);
             saveCookie(wlogin, guid, user_id, time);
             
                 var nottitle = "Hi " + nickname + "!";
                 var notBody = "Welcome back";
                 var noticon = "http://localhost/webdesktop/web/img/user.jpg";
-                var nottag = "hi"
+                var nottag = "hi";
                 notifyMe(nottitle, notBody, noticon, nottag);
             
-            LoadNotepadWhenLogin(user_id);
-
+            //LoadNotepadWhenLogin(user_id);
+            location.reload();
         }else{
             alert("Error in password or nickname! Try again please :)");
         }
@@ -84,6 +85,7 @@ function LoginAsUser(cookieName, cookieVal){
     function (data, status) {
         if (status == "success") {
             $(".user-bar").append(data);
+            $("#uuu").text($("#idszka").text());
             name = $(".panel-login").text();
             LoadNotepad();
         } else {

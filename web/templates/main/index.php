@@ -25,8 +25,8 @@ $smarty->assign('BASE_URL', $BASE_URL);
 //$error = "Coś tu jest";
 //$smarty->assign('error', $error);
 
-//$date = date('Y-m-d', time()); //date('m/d/Y h:i:s a', time());
-//$oDesktop->ClearCookiesTable($date);
+$date = date('Y-m-d', time()); //date('m/d/Y h:i:s a', time());
+$oDesktop->ClearCookiesTable($date);
 
 
 //ini_set('display_errors', 1); 

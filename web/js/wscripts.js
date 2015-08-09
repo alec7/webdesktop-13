@@ -21,7 +21,7 @@ $(document).ready(function(){
         $.getJSON('getip.php', function (data) {
             ip = data.ip;
             checkIpAddress(ip);
-        });
+        });        
         //LoginByUser(); // LogIn without checking IP address
 
         //eraseCookie(btoa('wlogin'));
