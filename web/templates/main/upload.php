@@ -14,6 +14,8 @@ if ( !empty( $_FILES ) ) {
     $fileName = $_FILES['file']['name'];
     $fileType = $_FILES['file']['type'];
     
+    //$transliterName = $oUser->transliterate($fileName);
+    
     $tempPath = $_FILES[ 'file' ][ 'tmp_name' ];
     //$uploadPath = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $_FILES[ 'file' ][ 'name' ];
     $uploadPath = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . '../../uploads';
@@ -57,14 +59,25 @@ if ( !empty( $_FILES ) ) {
     }
     $uploadPath = $uploadPath.DIRECTORY_SEPARATOR.$userId.$folder.DIRECTORY_SEPARATOR.$_FILES['file']['name'];
 
-
-
     //$uploadPath = $uploadPath."/".$userId. DIRECTORY_SEPARATOR . $_FILES[ 'file' ][ 'name' ];
     
 
-    move_uploaded_file( $tempPath, $uploadPath );
-    $oUser->saveUserFile($userId, $fileName, $fileType);
+
+
+    $temp = explode(".", $fileName);
+    $title = $oUser->transliterate($temp[0]);
+    $replaceArray = array(".", ",", "-", "_", "!", "@", "#", "$", "№", "%", "?", "&", "*", "(", ")", "`", "~", ":", "^", "'", "<", ">", "/", "|", "+");
+    $title = str_replace($replaceArray, " ", $title);
+    $replaced = str_replace(" ", "-", $title);
+    $newFilename = $replaced . '.' . end($temp);
+    $szlach = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . '../../uploads'.DIRECTORY_SEPARATOR.$userId.$folder.DIRECTORY_SEPARATOR.$newFilename;
+
+    move_uploaded_file($tempPath, $szlach);
     
+    
+    //move_uploaded_file( $tempPath, $uploadPath );
+    $oUser->saveUserFile($userId, $newFilename, $fileType, $title);
+        
     
     
     $answer = array( 'answer' => 'File transfer completed' );
