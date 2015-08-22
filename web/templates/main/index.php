@@ -144,7 +144,20 @@ if (isset($_POST)){
             //$smarty->assign('error', "You have no items in notebook");
             die();
         }
-    } 
+    }
+    if ($_POST['action'] == 'loadUserFiles') {
+        if($userFiles = $oDesktop->loadUserFiles($_POST)){
+            $smarty->assign('userFiles', $userFiles);
+            $smarty->display('ajax/user-files.html');
+            die();
+        }else{
+            //echo "You have no items in notebook";
+            //$smarty->assign('error', "You have no items in notebook");
+            die();
+        }
+    }
+    
+    
 }
 
 

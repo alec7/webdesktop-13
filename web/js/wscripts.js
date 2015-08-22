@@ -102,11 +102,25 @@ $(document).ready(function(){
     $('.drophere').bind('drop', function(){
         $(this).text(droptxt);
         $(".desktop").fadeIn("fast"); 
-    });
-    
+    });   
     /* actions for angular uploader  stop */
    
+   $(".user-files").click(function(){
+       var fileType = $(this).attr("data");
+       var userId = $("#idszka").text();
+       userFiles();
+       loadUserFiles(userId, fileType);
+   });
+   
+   
+   
 });
+
+
+function userFiles(){
+    $(".startpopup").fadeIn("fast");
+    $(".startpopup").html("<div class='loader'></div>");
+}
 
 function disableAll(){
     $(".panel-activator").removeClass("act");
@@ -115,8 +129,6 @@ function disableAll(){
     $(".desktop").fadeOut("fast");
     $(".angular-user-uploader").removeClass("act");
 }
-
-
 
 function Login(){
     var nickname = $("input[name='nickname']").val();
@@ -193,6 +205,7 @@ function notifyMe(nottitle, notBody, noticon, nottag) {
         });
         mailNotification.onclick = function () {
             window.focus();
+            this.close();
         };
   }
 
@@ -206,6 +219,7 @@ function notifyMe(nottitle, notBody, noticon, nottag) {
             });
             mailNotification.onclick = function () {
                 window.focus();
+                this.close();
             };
       }
     });

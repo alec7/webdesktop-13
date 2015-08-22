@@ -38,7 +38,7 @@ $.post(url,
                 var notBody = "Welcome back";
                 var noticon = "http://localhost/webdesktop/web/img/user.jpg";
                 var nottag = "hi";
-                notifyMe(nottitle, notBody, noticon, nottag);
+                //notifyMe(nottitle, notBody, noticon, nottag);
             
             //LoadNotepadWhenLogin(user_id);
             location.reload();
@@ -190,6 +190,30 @@ function addNote(noteTitle, noteContent){
             
         } else {
             alert("Error! Reload the page and complete again please");
+        }
+    });
+}
+
+function loadUserFiles(userId, fileType){
+    var url = "index.php";
+    $.post(url,
+            {
+                action: "loadUserFiles",
+                userId: userId,
+                fileType: fileType
+            },
+    function (data, status) {
+        if (status == "success") {
+            
+            setTimeout(function(){
+                $(".startpopup").html("<div class='file-viewer'></div>");
+                $(".file-viewer").html(data);
+                $(".file-viewer").fadeIn("fast");
+                $(".files-content").slimscroll();
+            }, 1000);
+        } else {
+            alert("error");
+            //location.reload();
         }
     });
 }

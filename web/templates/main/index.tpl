@@ -11,41 +11,8 @@
  
         
     <link rel="stylesheet" type="text/css" href="{$BASE_URL}/css/wstyle.css" />
-    <link rel="stylesheet" href="{$BASE_URL}/bootstrap/bootstrap.css" />
-    <script type="text/javascript" src="{$BASE_URL}/js/jquery-1.11.2.min.js"></script>
+    <link rel="stylesheet" href="{$BASE_URL}/bootstrap/css/bootstrap.css" />
 
-    <script defer src="{$BASE_URL}/bootstrap/bootstrap.min.js"></script>
-    
-    <script defer type="text/javascript" src="{$BASE_URL}/js/wscripts.js"></script>
-    <script defer type="text/javascript" src="wajax.js"></script>
-    
-    
-    {*<script defer type="text/javascript" src="{$BASE_URL}/js/dropzone.js"></script>
-    <link rel="stylesheet" type="text/css" href="{$BASE_URL}/css/dropzone.css" />
-    <script defer type="text/javascript" src="{$BASE_URL}/js/dndfunctions.js"></script>*}
-    
-    <script type="text/javascript" src="{$BASE_URL}/js/tinymce/tinymce.min.js"></script>
-    <script type="text/javascript">
-        {literal}
-            tinymce.init({
-                selector: "textarea.editor",
-                plugins: [
-                    "advlist autolink lists link image charmap print preview anchor",
-                    "searchreplace visualblocks code",
-                 "insertdatetime media table contextmenu paste"
-                ],
-                toolbar: "insertfile undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent"
-            });
-        {/literal}
-    </script>
-    
-    
-    <script defer type="text/javascript" src="{$BASE_URL}/js/angular.min.js"></script>
-    <script defer src="./angular-file-upload.js"></script>
-    <script defer src="./controllers.js"></script>
-    
-    
-    
 </head>
     <body  ng-controller="AppController" nv-file-drop="" uploader="uploader" filters="queueLimit, customFilter">
         <div class="genpopup"></div>
@@ -68,6 +35,15 @@
         {$MAIN_URL}
         <br />
         <a href="{$BASE_URL}">back to home page</a>
+        
+        <br /><br /><br />
+        <div class="live">
+            <div class="user-files user-imgs" data="img">User Images</div>
+            <div class="user-files user-music" data="music">User Musics</div>
+            <div class="user-files user-video" data="video">User Videos</div>
+            <div class="user-files user-docs" data="doc">User Documents</div>
+            <div class="user-files user-docs" data="arhive">User Arhives</div>
+        </div>
         
         
         {*<div class="dropzone-wrap">
@@ -173,6 +149,39 @@
         <div class="error">{$error}</div>
         <div id="uuu"></div>
         
+        
+        
+    <script type="text/javascript" src="{$BASE_URL}/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="{$BASE_URL}/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{$BASE_URL}/js/wscripts.js"></script>
+    <script type="text/javascript" src="wajax.js"></script>
+    <script type="text/javascript" src="{$BASE_URL}/js/slimscroll.js"></script>
+    
+    {*<script defer type="text/javascript" src="{$BASE_URL}/js/dropzone.js"></script>
+    <link rel="stylesheet" type="text/css" href="{$BASE_URL}/css/dropzone.css" />
+    <script defer type="text/javascript" src="{$BASE_URL}/js/dndfunctions.js"></script>*}
+    
+    <script type="text/javascript" src="{$BASE_URL}/js/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript">
+        {literal}
+            tinymce.init({
+                selector: "textarea.editor",
+                plugins: [
+                    "advlist autolink lists link image charmap print preview anchor",
+                    "searchreplace visualblocks code",
+                    "insertdatetime media table contextmenu paste"
+                ],
+                toolbar: "insertfile undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent"
+            });
+        {/literal}
+    </script>
+    
+    
+    <script type="text/javascript" src="{$BASE_URL}/js/angular.min.js"></script>
+    <script type="text/javascript" src="./angular-file-upload.js"></script>
+    <script type="text/javascript" src="./controllers.js"></script>
+        
+    
         
     </body>
 </html>

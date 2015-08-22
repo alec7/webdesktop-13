@@ -31,10 +31,8 @@ if ( !empty( $_FILES ) ) {
             $folder = "/img";
             break;
         case "application/pdf":
-            $folder = "/pdf";
-            break;
         case "text/plain":
-            $folder = "/txt";
+            $folder = "/doc";
             break;
         case "application/octet-stream":
             $folder = "/archive";
