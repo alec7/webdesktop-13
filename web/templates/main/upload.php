@@ -13,11 +13,9 @@ if ( !empty( $_FILES ) ) {
     
     $fileName = $_FILES['file']['name'];
     $fileType = $_FILES['file']['type'];
-    
-    //$transliterName = $oUser->transliterate($fileName);
+    $isImage = 0;
     
     $tempPath = $_FILES[ 'file' ][ 'tmp_name' ];
-    //$uploadPath = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $_FILES[ 'file' ][ 'name' ];
     $uploadPath = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . '../../uploads';
 
     
@@ -31,6 +29,7 @@ if ( !empty( $_FILES ) ) {
         case "image/png":
         case "image/gif":
             $folder = "/img";
+            $isImage = 1;
             break;
         case "application/pdf":
         case "text/plain":
@@ -50,7 +49,7 @@ if ( !empty( $_FILES ) ) {
             break;
         default:
             var_dump($fileType);
-            //die("Unknown type of the file");
+            die("Unknown type of the file");
             break;
     }
     
@@ -61,9 +60,7 @@ if ( !empty( $_FILES ) ) {
 
     //$uploadPath = $uploadPath."/".$userId. DIRECTORY_SEPARATOR . $_FILES[ 'file' ][ 'name' ];
     
-
-
-
+    /*  optimalizate fileName   */
     $temp = explode(".", $fileName);
     $title = $oUser->transliterate($temp[0]);
     $replaceArray = array(".", ",", "-", "_", "!", "@", "#", "$", "№", "%", "?", "&", "*", "(", ")", "`", "~", ":", "^", "'", "<", ">", "/", "|", "+");
@@ -71,15 +68,56 @@ if ( !empty( $_FILES ) ) {
     $replaced = str_replace(" ", "-", $title);
     $newFilename = $replaced . '.' . end($temp);
     $szlach = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . '../../uploads'.DIRECTORY_SEPARATOR.$userId.$folder.DIRECTORY_SEPARATOR.$newFilename;
-
+    
     move_uploaded_file($tempPath, $szlach);
     
+    if($isImage == 1){
+        $t = "/thumbs";
+        $uploadsFolder = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . '../../uploads';
+        $thumbPath = $uploadsFolder.DIRECTORY_SEPARATOR.$userId.$t.DIRECTORY_SEPARATOR.$newFilename;
+        if (!file_exists($uploadsFolder.DIRECTORY_SEPARATOR.$userId.$t)) {
+            mkdir($uploadsFolder.DIRECTORY_SEPARATOR.$userId.$t, 0777, true);
+        }
+        copy($szlach, $thumbPath);
+    }
+
+    $oUser->saveUserFile($userId, $newFilename, $fileType, $title); // saving data to db
     
-    //move_uploaded_file( $tempPath, $uploadPath );
-    $oUser->saveUserFile($userId, $newFilename, $fileType, $title);
-        
     
     
+    if ($isImage == 1) {
+        $image = imagecreatefromjpeg($thumbPath);
+        $filename = $thumbPath;
+
+        $thumb_width = 275;
+        $thumb_height = 200;
+
+        $width = imagesx($image);
+        $height = imagesy($image);
+
+        $original_aspect = $width / $height;
+        $thumb_aspect = $thumb_width / $thumb_height;
+
+        if ($original_aspect >= $thumb_aspect) {
+            // If image is wider than thumbnail (in aspect ratio sense)
+            $new_height = $thumb_height;
+            $new_width = $width / ($height / $thumb_height);
+        } else {
+            // If the thumbnail is wider than the image
+            $new_width = $thumb_width;
+            $new_height = $height / ($width / $thumb_width);
+        }
+
+        $thumb = imagecreatetruecolor($thumb_width, $thumb_height);
+
+        // Resize and crop
+        imagecopyresampled($thumb, $image, 0 - ($new_width - $thumb_width) / 2, // Center the image horizontally
+                0 - ($new_height - $thumb_height) / 2, // Center the image vertically
+                0, 0, $new_width, $new_height, $width, $height);
+        imagejpeg($thumb, $filename, 80);
+    }
+
+
     $answer = array( 'answer' => 'File transfer completed' );
     $json = json_encode( $answer );
 

@@ -194,7 +194,7 @@ function addNote(noteTitle, noteContent){
     });
 }
 
-function loadUserFiles(userId, fileType){
+function loadUserFiles(userId, fileType, fileCategory){
     var url = "index.php";
     $.post(url,
             {
@@ -204,10 +204,11 @@ function loadUserFiles(userId, fileType){
             },
     function (data, status) {
         if (status == "success") {
-            
             setTimeout(function(){
-                $(".startpopup").html("<div class='file-viewer'></div>");
-                $(".file-viewer").html(data);
+                $(".startpopup").html("<div class='file-viewer'><div class='file-panel'><h1 class='text-center'></h1></div></div>");
+                //$(".file-viewer").html(data);
+                $(".file-viewer").append(data);
+                $(".file-panel h1").html(fileCategory + "<div class='viewer-close'></div>");
                 $(".file-viewer").fadeIn("fast");
                 $(".files-content").slimscroll();
             }, 1000);

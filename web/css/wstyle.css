@@ -597,12 +597,49 @@ color: red;
   position: fixed;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background: transparent;
   z-index: 3;
   color: black;
   display: none;
-  border: 1px solid red;
+  padding-top: 60px;
+}
+.file-panel{
+width: 100%;
+height: 55px;
+background: #000;
+position: absolute;
+top: 0;
+z-index: 5;
+padding: 7px;
+}
+.file-panel h1{
+    color: #fff;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.file-panel .viewer-close{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    float: right;
+    margin-top: -8px;
+    background: url(../img/delete.png) no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.file-panel .viewer-close:hover{
+    border: 3px solid red;
+    border-radius: 50px;
 }
 .files-content{
 position: relative;
@@ -613,6 +650,92 @@ height: 100%;
 margin-bottom: 30px;
 max-width: 275px;
 max-height: 200px;
-border: 1px solid green;
 overflow: hidden;
+display: inline-block;
+position: relative;
+cursor: pointer;
+border: 1px solid #000;
+padding: 0;
+    -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.45);
+    -webkit-transition: all 700ms cubic-bezier(0.175, 0.885, 0.200, 1.45);
+    -moz-transition: all 700ms cubic-bezier(0.175, 0.885, 0.200, 1.45);
+    -o-transition: all 700ms cubic-bezier(0.175, 0.885, 0.200, 1.45);
+    transition: all 700ms cubic-bezier(0.175, 0.885, 0.200, 1.45);
+}
+.file-block:before {
+content: '';
+display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.45);
+    -webkit-transition: all 700ms cubic-bezier(0.175, 0.885, 0.200, 1.45);
+    -moz-transition: all 700ms cubic-bezier(0.175, 0.885, 0.200, 1.45);
+    -o-transition: all 700ms cubic-bezier(0.175, 0.885, 0.200, 1.45);
+    transition: all 700ms cubic-bezier(0.175, 0.885, 0.200, 1.45);
+}
+.file-block:hover:before {
+    background: rgba(0,0,0,0.75);
+}
+.file-block:hover{
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+}
+.file-data{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    font: 15px/22px "Tahoma";
+    height: 0;
+    -webkit-transition: all 250ms linear;
+    -moz-transition: all 250ms linear;
+    -ms-transition: all 250ms linear;
+    -o-transition: all 250ms linear;
+    transition: all 250ms linear;
+}
+.file-data .file-date{
+    font-size: 11px;
+}
+.file-block:hover .file-data{
+    height: auto;
+    bottom: 25%;    
+}
+.live{
+    border: 1px solid #fff;
+    background: rgba(0,0,0,0.55);
+    padding: 15px;
+    font: 16px/20px "Tahoma";
+    text-align: center;
+}
+.live .user-files{
+    border: 1px solid #fff;
+    background: rgba(0,0,0,0.75);
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 37px 0;
+    text-align: center;
+    margin: 15px;
+    
+    -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.45);
+    -webkit-transition: all 700ms cubic-bezier(0.175, 0.885, 0.200, 1.45);
+    -moz-transition: all 700ms cubic-bezier(0.175, 0.885, 0.200, 1.45);
+    -o-transition: all 700ms cubic-bezier(0.175, 0.885, 0.200, 1.45);
+    transition: all 700ms cubic-bezier(0.175, 0.885, 0.200, 1.45);
+}
+.live .user-files:hover{
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    -o-transform: scale(0.85);
+    transform: scale(0.85);
 }

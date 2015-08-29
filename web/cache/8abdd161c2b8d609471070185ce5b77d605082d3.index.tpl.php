@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:2023654fb8b2899da52-60148829%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1366255e1f73dbd0c37-09738451%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -27,13 +27,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2023654fb8b2899da52-60148829',
-  'cache_lifetime' => 1,
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_55d8e84b021f91_96045085',
+  'nocache_hash' => '1366255e1f73dbd0c37-09738451',
+  'variables' => 
+  array (
+    'BASE_URL' => 0,
+    'MAIN_URL' => 0,
+  ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55e1f73dc6d845_75208088',
+  'cache_lifetime' => 1,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55d8e84b021f91_96045085')) {function content_55d8e84b021f91_96045085($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_55e1f73dc6d845_75208088')) {function content_55e1f73dc6d845_75208088($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
         <title>V Desktop start page</title>

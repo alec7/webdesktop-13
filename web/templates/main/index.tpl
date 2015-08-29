@@ -11,7 +11,9 @@
  
         
     <link rel="stylesheet" type="text/css" href="{$BASE_URL}/css/wstyle.css" />
-    <link rel="stylesheet" href="{$BASE_URL}/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="{$BASE_URL}/css/adaptive.css" />
+    <link rel="stylesheet" href="{$BASE_URL}/vendor/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="{$BASE_URL}/vendor/lightbox/css/lightbox.css" />
 
 </head>
     <body  ng-controller="AppController" nv-file-drop="" uploader="uploader" filters="queueLimit, customFilter">
@@ -31,18 +33,20 @@
         <div class="startpopup"></div>
             {include file="user/user-forms.html"}
             
-        {$BASE_URL}<br />
-        {$MAIN_URL}
-        <br />
         <a href="{$BASE_URL}">back to home page</a>
         
-        <br /><br /><br />
-        <div class="live">
-            <div class="user-files user-imgs" data="img">User Images</div>
-            <div class="user-files user-music" data="music">User Musics</div>
-            <div class="user-files user-video" data="video">User Videos</div>
-            <div class="user-files user-docs" data="doc">User Documents</div>
-            <div class="user-files user-docs" data="arhive">User Arhives</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="live">
+                        <div class="user-files user-imgs" data="img">Images</div>
+                        <div class="user-files user-music" data="music">Musics</div>
+                        <div class="user-files user-video" data="video">Videos</div>
+                        <div class="user-files user-docs" data="doc">Documents</div>
+                        <div class="user-files user-archives" data="arhive">Arhives</div>
+                    </div>
+                </div>
+            </div>
         </div>
         
         
@@ -152,10 +156,11 @@
         
         
     <script type="text/javascript" src="{$BASE_URL}/js/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="{$BASE_URL}/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{$BASE_URL}/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{$BASE_URL}/js/wscripts.js"></script>
     <script type="text/javascript" src="wajax.js"></script>
     <script type="text/javascript" src="{$BASE_URL}/js/slimscroll.js"></script>
+    <script type="text/javascript" src="{$BASE_URL}/vendor/lightbox/js/lightbox.min.js"></script>
     
     {*<script defer type="text/javascript" src="{$BASE_URL}/js/dropzone.js"></script>
     <link rel="stylesheet" type="text/css" href="{$BASE_URL}/css/dropzone.css" />
@@ -180,7 +185,11 @@
     <script type="text/javascript" src="{$BASE_URL}/js/angular.min.js"></script>
     <script type="text/javascript" src="./angular-file-upload.js"></script>
     <script type="text/javascript" src="./controllers.js"></script>
+    
+    
         
+
+    
     
         
     </body>

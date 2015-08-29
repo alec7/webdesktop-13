@@ -80,7 +80,7 @@ $(document).ready(function(){
     
     /* actions for angular uploader */
     $(document).on('click', '.file-upload', function(){
-        $(".angular-user-uploader").addClass("act");
+        $(".angular-user-uploader").toggleClass("act");
     });
 
     htmldoc.bind('dragenter', function(){
@@ -109,10 +109,38 @@ $(document).ready(function(){
        var fileType = $(this).attr("data");
        var userId = $("#idszka").text();
        userFiles();
-       loadUserFiles(userId, fileType);
+       
+       var fileCategory;
+        switch(fileType) {
+            case "img":
+                fileCategory = "Your Gallery";
+                break;
+            case "music":
+                fileCategory = "Your Music";
+                break;
+            case "video":
+                fileCategory = "Your Videos";
+                break;
+            case "doc":
+                fileCategory = "Your Documents";
+                break;
+            case "arhive":
+                fileCategory = "Your Archives";
+                break;
+            default:
+                fileCategory = "Your Files Manager";
+        }
+       
+       loadUserFiles(userId, fileType, fileCategory);
    });
    
+   /*   Files events   */
+    
+    $(document).on("click", ".file-panel .viewer-close", function(){
+        userFilesDisable();
+    });
    
+  
    
 });
 
@@ -120,6 +148,11 @@ $(document).ready(function(){
 function userFiles(){
     $(".startpopup").fadeIn("fast");
     $(".startpopup").html("<div class='loader'></div>");
+}
+function userFilesDisable(){
+    $(".startpopup").fadeOut("fast");
+    $(".startpopup").html("");
+    $(".file-viewer").fadeOut("fast");
 }
 
 function disableAll(){

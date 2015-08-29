@@ -1,0 +1,9 @@
+@media screen and (max-width: 480px){
+    .file-data{
+        font: 12px/15px "Tahoma";
+    }
+    .file-data.act{
+        height: auto;
+        bottom: 15%;
+    }
+}
