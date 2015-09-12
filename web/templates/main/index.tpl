@@ -14,7 +14,10 @@
     <link rel="stylesheet" type="text/css" href="{$BASE_URL}/css/adaptive.css" />
     <link rel="stylesheet" href="{$BASE_URL}/vendor/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="{$BASE_URL}/vendor/lightbox/css/lightbox.css" />
-
+    <script>
+        var BASE_URL = '{$BASE_URL}';
+        var MAIN_URL = '{$MAIN_URL}';
+    </script>
 </head>
     <body  ng-controller="AppController" nv-file-drop="" uploader="uploader" filters="queueLimit, customFilter">
         <div class="genpopup"></div>
@@ -185,13 +188,7 @@
     <script type="text/javascript" src="{$BASE_URL}/js/angular.min.js"></script>
     <script type="text/javascript" src="./angular-file-upload.js"></script>
     <script type="text/javascript" src="./controllers.js"></script>
-    
-    
-        
 
-    
-    
-        
     </body>
 </html>
 

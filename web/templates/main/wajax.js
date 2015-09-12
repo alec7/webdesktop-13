@@ -36,7 +36,7 @@ $.post(url,
             
                 var nottitle = "Hi " + nickname + "!";
                 var notBody = "Welcome back";
-                var noticon = "http://localhost/webdesktop/web/img/user.jpg";
+                var noticon = BASE_URL + "/img/user.jpg";
                 var nottag = "hi";
                 //notifyMe(nottitle, notBody, noticon, nottag);
             
@@ -218,3 +218,95 @@ function loadUserFiles(userId, fileType, fileCategory){
         }
     });
 }
+
+function removeFile(fileId, userId, fileName, fileCategory){
+    var url = "index.php";
+    $.post(url,
+            {
+                action: "removeFile",
+                fileId: fileId,
+                userId: userId,
+                fileName: fileName,
+                fileCategory: fileCategory
+            },
+    function (data, status) {
+        if (status == "success") {
+            $(".file-block[file-id='"+fileId+"']").addClass("removing");
+            setTimeout(function () {
+                $(".file-block[file-id='"+fileId+"']").parent().remove();
+            }, 250);
+        } else {
+            alert("error");
+        }
+    });
+}
+
+function loadUserData(userId){
+    var url = "index.php";
+    $.post(url,
+            {
+                action: "loadUserData",
+                userId: userId
+            },
+    function (data, status) {
+        if (status == "success") {
+            $(".user-bar").removeClass("active");
+            $(".panel-desktop").removeClass("click");
+            $(".desktop").fadeOut("fast");
+            $(".panel-activator").removeClass("act");
+
+            setTimeout(function(){
+                $(".startpopup").html("<div class='file-viewer'><div class='file-panel'><h1 class='text-center'></h1></div></div>");
+                $(".file-viewer").append(data);
+                $(".file-panel h1").html("Your profile" + "<div class='viewer-close'></div>");
+                $(".file-viewer").fadeIn("fast");
+                $(".files-content").slimscroll();
+            }, 1000);
+        } else {
+            alert("error");
+            //location.reload();
+        }
+    });
+}
+
+function saveUserData(formData, isPasswordForm, userId){
+    var url = "index.php";
+    $.post(url,
+            {
+                action: "saveUserData",
+                data: formData,
+                changePassword: isPasswordForm,
+                userId: userId
+            },
+    function (data, status) {
+        if (status == "success") {
+            $(".save-user-data").text("Save");
+            
+            var klasa1 = "alert";
+            var klasa2;
+            switch(data) {
+                case "Data have been changed":
+                    klasa2 = "alert-success";
+                    break;
+                case "invalid password":
+                    klasa2 = "alert-danger";
+                    break;
+                case "confirm password is invalid":
+                    klasa2 = "alert-warning";
+                    break;
+                case "complete all fields":
+                    klasa2 = "alert-warning";
+                    break;
+                default:
+                    klasa2 = "alert-success";
+            }
+            $("#form-status").attr("class", "");
+            $("#form-status").addClass(klasa1).addClass(klasa2);
+            $("#form-status").text(data);
+        } else {
+            alert("error");
+            location.reload();
+        }
+    });
+}
+

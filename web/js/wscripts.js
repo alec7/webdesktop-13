@@ -7,7 +7,7 @@ $(document).ready(function(){
     
     var nottitle = "Hi " + name + "!";
     var notBody = "Welcome back";
-    var noticon = "http://localhost/webdesktop/web/img/user.jpg";
+    var noticon = BASE_URL + "/img/user.jpg";
     var nottag = "hi";
     var idszka;
     
@@ -105,6 +105,7 @@ $(document).ready(function(){
     });   
     /* actions for angular uploader  stop */
    
+      /*   Files events   */
    $(".user-files").click(function(){
        var fileType = $(this).attr("data");
        var userId = $("#idszka").text();
@@ -130,17 +131,56 @@ $(document).ready(function(){
             default:
                 fileCategory = "Your Files Manager";
         }
-       
        loadUserFiles(userId, fileType, fileCategory);
    });
    
-   /*   Files events   */
-    
     $(document).on("click", ".file-panel .viewer-close", function(){
         userFilesDisable();
     });
-   
-  
+    $(document).on("click", ".file-remove", function(){
+        var fileId = $(this).attr("file-id");
+        var userId = $("#idszka").text();
+        var fileName = $(this).attr("file-name");
+        var fileCategory = $(this).attr("file-category");
+        
+        removeFile(fileId, userId, fileName, fileCategory);
+    });
+    /*   END Files events   */
+    
+    $(document).on("click", ".shutdown", function(){
+        eraseCookie(btoa('wlogin'));
+        startPopup();
+        location.reload();
+    });
+    $(document).on("click", ".user-panel", function(){
+        var userId = $("#idszka").text();
+        userFiles();
+        loadUserData(userId);
+    });
+    
+    $(document).on("click", ".change-password-but", function(){
+        $(this).addClass("disabled");
+        $(".save-user-data").attr("password", "1");
+        
+        $("#user-data-form").load("./ajax/change-password-form.html", function (responseTxt, statusTxt, xhr) {
+            if (statusTxt == "success") {
+            }
+            if (statusTxt == "error") {             
+                location.reload();
+            }
+        });
+    });
+
+    $(document).on("click", ".save-user-data", function(){
+        $(this).text("Saving...");
+        var isPasswordForm = $(this).attr("password");
+        var formData = $('#user-data-form').serializeArray();
+        var userId = $("#idszka").text();
+        saveUserData(formData, isPasswordForm, userId);
+    });
+    
+    
+    
    
 });
 
@@ -280,8 +320,6 @@ function checkIpAddress(ip){
     var cookieVal = readCookie(btoa('wlogin'));
     var cookieName = btoa('wlogin');
     //var result = ajaxCheckIpAddress(cookieName, cookieVal, ip);
-    
-    
     var url = "index.php";
     $.post(url,
             {
@@ -304,6 +342,5 @@ function checkIpAddress(ip){
             return false;
         }
     });
-    
-
 }
+

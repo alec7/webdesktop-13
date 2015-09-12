@@ -5,10 +5,12 @@
         <group>
             <file>file:/C:/xampp/htdocs/webdesktop/web/templates/main/wajax.js</file>
             <file>file:/C:/xampp/htdocs/webdesktop/web/templates/main/upload.php</file>
+            <file>file:/C:/xampp/htdocs/webdesktop/web/includes/desktop.class.php</file>
             <file>file:/C:/xampp/htdocs/webdesktop/web/templates/main/index.tpl</file>
             <file>file:/C:/xampp/htdocs/webdesktop/web/css/wstyle.css</file>
             <file>file:/C:/xampp/htdocs/webdesktop/web/js/wscripts.js</file>
             <file>file:/C:/xampp/htdocs/webdesktop/web/templates/main/ajax/user-files.html</file>
+            <file>file:/C:/xampp/htdocs/webdesktop/web/templates/main/index.php</file>
         </group>
     </open-files>
 </project-private>

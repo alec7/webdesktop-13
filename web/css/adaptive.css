@@ -1,3 +1,19 @@
+@media screen and (max-width: 768px){
+    .white-block{
+        width: 100%;
+    }
+    .live .user-files{
+        width: 80px;
+        height: 80px;
+        font-size: 12px;
+        padding: 28px 0;
+    }
+}
+@media screen and (max-width: 540px){
+    .onpopup{
+        width: 100%;
+    }
+}
 @media screen and (max-width: 480px){
     .file-data{
         font: 12px/15px "Tahoma";

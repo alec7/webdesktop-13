@@ -73,12 +73,18 @@ filter: blur(2px);
   display: none;
 }
 .onpopup{
-  min-width: 430px;
-  min-height: 184px;
+  width: 75%;
+/*  max-height: 184px;*/
   position: fixed;
   top: 50%;
   left: 50%;
+  
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  
   background: white;
   z-index: 3;
   display: none;
@@ -104,7 +110,7 @@ color: #3a2e9d;
   float: left;
   text-align: right;
   font: 20px/20px Tahoma;
-  margin-top: 4px;
+  margin: 5px 0;
 }
 .onpopup input{
 width: 175px;
@@ -122,9 +128,12 @@ box-sizing: border-box;
 border: 2px solid #3a2e9d;
 color: #3a2e9d;
 outline: none;
-width: 225px;
+/*width: 225px;*/
 }
 .onpopup .submit{
+    margin-bottom: 5px;
+}
+/*.onpopup .submit{
 border: 2px solid #3a2e9d;
 border-radius: 50px;
 box-sizing: border-box;
@@ -139,11 +148,11 @@ cursor: pointer;
 float: left;
 margin-right: 13px;
 margin-bottom: 7px;
-}
-.onpopup .submit:hover{
+}*/
+/*.onpopup .submit:hover{
 color: white;
 background: #3a2e9d;
-}
+}*/
 .desktop{
   width: 100%;
   height: 100%;
@@ -265,11 +274,24 @@ display: block;
   overflow: hidden;
   text-align: center;
 }
+.user-panel:hover{
+    color: red;
+}
 .user-tools{
   width: 215px;
   height: 50px;
   float: right;
+  padding: 15px 0 0 0;
 }
+.user-tools > *{
+    margin-left: 10px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.user-tools .shutdown:hover, .user-tools .user-manager-but:hover{
+    color: red;
+} 
 .user-icon{
 border-radius: 50%;
 cursor: pointer;
@@ -699,13 +721,41 @@ display: block;
     -ms-transition: all 250ms linear;
     -o-transition: all 250ms linear;
     transition: all 250ms linear;
+    border: 1px solid #000;
+    overflow: hidden;
 }
 .file-data .file-date{
     font-size: 11px;
 }
+.file-preview{
+    border: 1px solid #000;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 250ms linear;
+    -moz-transition: all 250ms linear;
+    -ms-transition: all 250ms linear;
+    -o-transition: all 250ms linear;
+    transition: all 250ms linear;
+    font-size: 30px;
+    color: rgba(255,255,255,0.75);
+    opacity: 0;
+        
+}
+.file-preview span{
+    margin-top: 5%;
+}
 .file-block:hover .file-data{
-    height: auto;
-    bottom: 25%;    
+    height: 50%;
+}
+.file-block:hover .file-preview{
+/*    height: 50%;*/
+    opacity: 1;
+}
+.file-block.removing{
+    opacity: 0;
 }
 .live{
     border: 1px solid #fff;
@@ -738,4 +788,42 @@ display: block;
     -ms-transform: scale(0.85);
     -o-transform: scale(0.85);
     transform: scale(0.85);
+}
+.file-remove{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: url('../img/delete.png') no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    cursor: pointer;
+}
+.file-remove:hover{
+    border: 1px solid red;
+    border-radius: 50%;
+}
+.file-download{
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    z-index: 2;
+    font-size: 16px;
+}
+.white-block{
+    background: white;
+    width: 50%;
+    padding: 25px;
+    margin: 0 auto;
+}
+
+.change-password-but.disabled{
+    display: none;
+}
+#form-status{
+    margin-top: 15px;
 }

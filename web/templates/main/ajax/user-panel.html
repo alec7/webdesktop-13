@@ -4,8 +4,11 @@
         <div class="panel-login">{$user.login|truncate:10:"":false}</div>
         <span id="idszka">{$user.id}</span>
     </div>
+
     <div class="user-tools">
         <div class="file-upload" title="file uploader"></div>
+        <div class="shutdown glyphicon glyphicon-off"></div>
+        {if $user.admin == 1}<div class="user-manager-but glyphicon glyphicon-user"></div>{/if}
     </div>
     <div class="clear"></div>
     <div class="h4">

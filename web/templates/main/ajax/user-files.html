@@ -4,15 +4,18 @@
             {if $userFiles.0.category == "img"}
                 {foreach from=$userFiles item=file name=file}
                     <div class="col-md-3 col-sm-4 col-xs-6">
-                        <a href="{$BASE_URL}/uploads/{$file.user_id}/{$file.category}/{$file.name}" data-lightbox="roadtrip">
-                            <div class="file-block">
-                                <img src="{$BASE_URL}/uploads/{$file.user_id}/thumbs/{$file.name}" class="img-responsive" />
-                                <div class="file-data">
-                                    <div class="file-title text-center">{$file.title}</div>
-                                    <div class="file-date">{$file.date_add|date_format:"%d-%m-%Y"}</div>
-                                </div>
+                        <div class="file-block trans200" file-id="{$file.id}">
+                            <a href="{$BASE_URL}/uploads/{$file.user_id}/{$file.category}/{$file.name}" data-lightbox="roadtrip">
+                                <div class="text-center file-preview"><span class="glyphicon glyphicon-picture"></span></div>
+                            </a>
+                            <img src="{$BASE_URL}/uploads/{$file.user_id}/thumbs/{$file.name}" class="img-responsive" />
+                            <div class="file-data">
+                                <div class="file-title text-center">{$file.title}</div>
+                                <div class="file-date">{$file.date_add|date_format:"%d-%m-%Y"}</div>
+                                <a class="glyphicon glyphicon-download-alt file-download" href="{$BASE_URL}/uploads/{$file.user_id}/img/{$file.name}" download="{$file.name}"></a>
+                                <div class="file-remove" file-id="{$file.id}" file-name="{$file.name}" file-category="{$file.category}"></div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 {/foreach}
             {/if}

@@ -4,4 +4,4 @@ web/cache/*
 web/templates/main/templates_c/*
 web/templates/main/cache/*
 web/templates/main/uploads/*
-!web/uploads/*
+web/uploads/*

@@ -156,6 +156,31 @@ if (isset($_POST)){
             die();
         }
     }
+    if ($_POST['action'] == 'removeFile') {
+        if($oDesktop->removeFile($_POST)){
+            return true;
+            die();
+        }else{
+            die();
+        }
+    }
+    if ($_POST['action'] == 'loadUserData') {
+        if($userData = $oUser->getUserData($_POST)){
+            $smarty->assign('userData', $userData);
+            $smarty->display('ajax/user-data.html');
+            die();
+        }else{
+            die();
+        }
+    }
+    
+    if ($_POST['action'] == 'saveUserData') {
+        if($oUser->saveUserData($_POST)){
+            die("Data have been changed");
+        }else{
+            die("Data have been changed");
+        }
+    }
     
     
 }
