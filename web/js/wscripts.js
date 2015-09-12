@@ -179,7 +179,11 @@ $(document).ready(function(){
         saveUserData(formData, isPasswordForm, userId);
     });
     
-    
+    $(document).on("click", ".user-manager-but", function(){
+        var userId = $("#idszka").text();
+        userFiles();
+        loadUserManager(userId);
+    });
     
    
 });

@@ -1,0 +1,60 @@
+<div class="files-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="white-block" style='width: 100%;'>
+                    {*<div class="div-table">
+                        <div class="div-table-row">
+                            <div class="div-table-col">Login</div>
+                            <div  class="div-table-col">Name</div>
+                            <div  class="div-table-col">City</div>
+                            <div class="div-table-col">E-mail</div>
+                            <div  class="div-table-col">Active</div>
+                            <div  class="div-table-col">Options</div>
+                        </div>
+                        {foreach from=$userList item=list name=list}
+                            <div class="div-table-row">
+                                <div class="div-table-col">{$list.login}</div>
+                                <div class="div-table-col">{$list.first_name} {$list.last_name}</div>
+                                <div class="div-table-col">{$list.city}</div>
+                                <div class="div-table-col">{$list.email}</div>
+                                <div class="div-table-col">{$list.active}</div>
+                                <div class="div-table-col"><button class='btn btn-info'>Change</button></div>
+                            </div>
+                        {/foreach}
+                    </div>*}
+                    
+                    
+                    
+                    
+                    <table border='1'>
+                        <tr>
+                            <th>Nb.</th>
+                            <th>Login</th>
+                            <th>Name</th>
+                            <th>City</th>
+                            <th>E-mail</th>
+                            <th>Active</th>
+                            <th>Options</th>
+                        </tr>
+                        {foreach from=$userList item=list name=list}
+                            <tr>
+                                <td>{$smarty.foreach.list.iteration}</td>
+                                <td>{$list.login}</td>
+                                <td>{$list.first_name} {$list.last_name}</td>
+                                <td>{$list.city}</td>
+                                <td>{$list.email}</td>
+                                <td>{if $list.active == 1}<div class='alert alert-success text-center'>Yes</div>{else}<div class='alert alert-danger text-center'>No</div>{/if}</td>
+                                <td>
+                                    <button class='btn {if $list.active == 1}btn-warning{else}btn-info{/if}'>{if $list.active == 1}Disable{else}Active{/if}</button>
+                                    <button class="btn btn-danger">X</button>
+                                </td>
+                            </tr>
+                        {/foreach}
+                    </table>
+                    <div id="form-status" class=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

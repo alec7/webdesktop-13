@@ -43,7 +43,7 @@ $.post(url,
             //LoadNotepadWhenLogin(user_id);
             location.reload();
         }else{
-            alert("Error in password or nickname! Try again please :)");
+            alert("Error in password or nickname! Try again please. " + data);
         }
       }else{
         alert("error");
@@ -306,6 +306,35 @@ function saveUserData(formData, isPasswordForm, userId){
         } else {
             alert("error");
             location.reload();
+        }
+    });
+}
+
+
+function loadUserManager(userId){
+    var url = "index.php";
+    $.post(url,
+            {
+                action: "loadUserManager",
+                userId: userId
+            },
+    function (data, status) {
+        if (status == "success") {
+            $(".user-bar").removeClass("active");
+            $(".panel-desktop").removeClass("click");
+            $(".desktop").fadeOut("fast");
+            $(".panel-activator").removeClass("act");
+
+            setTimeout(function(){
+                $(".startpopup").html("<div class='file-viewer'><div class='file-panel'><h1 class='text-center'></h1></div></div>");
+                $(".file-viewer").append(data);
+                $(".file-panel h1").html("Users Manager" + "<div class='viewer-close'></div>");
+                $(".file-viewer").fadeIn("fast");
+                $(".files-content").slimscroll();
+            }, 1000);
+        } else {
+            alert("error");
+            //location.reload();
         }
     });
 }

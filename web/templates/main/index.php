@@ -173,7 +173,6 @@ if (isset($_POST)){
             die();
         }
     }
-    
     if ($_POST['action'] == 'saveUserData') {
         if($oUser->saveUserData($_POST)){
             die("Data have been changed");
@@ -181,6 +180,16 @@ if (isset($_POST)){
             die("Data have been changed");
         }
     }
+    if ($_POST['action'] == 'loadUserManager') {
+        if($userList = $oUser->getUserManager($_POST)){
+            $smarty->assign('userList', $userList);
+            $smarty->display('ajax/user-manager.html');
+            die();
+        }else{
+            die();
+        }
+    }
+    
     
     
 }
