@@ -14,10 +14,13 @@
     <link rel="stylesheet" type="text/css" href="{$BASE_URL}/css/adaptive.css" />
     <link rel="stylesheet" href="{$BASE_URL}/vendor/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="{$BASE_URL}/vendor/lightbox/css/lightbox.css" />
+
+    
     <script>
         var BASE_URL = '{$BASE_URL}';
         var MAIN_URL = '{$MAIN_URL}';
     </script>
+
 </head>
     <body  ng-controller="AppController" nv-file-drop="" uploader="uploader" filters="queueLimit, customFilter">
         <div class="genpopup"></div>
@@ -53,9 +56,6 @@
         </div>
         
         
-        {*<div class="dropzone-wrap">
-            <form class="dropzone" action="{$MAIN_URL}/upload.php" method="post" enctype="multipart/form-data"></form>
-        </div>*}
 
         <div class="angular-user-uploader trans200">
             {literal}
@@ -164,10 +164,11 @@
     <script type="text/javascript" src="wajax.js"></script>
     <script type="text/javascript" src="{$BASE_URL}/js/slimscroll.js"></script>
     <script type="text/javascript" src="{$BASE_URL}/vendor/lightbox/js/lightbox.min.js"></script>
+
     
-    {*<script defer type="text/javascript" src="{$BASE_URL}/js/dropzone.js"></script>
-    <link rel="stylesheet" type="text/css" href="{$BASE_URL}/css/dropzone.css" />
-    <script defer type="text/javascript" src="{$BASE_URL}/js/dndfunctions.js"></script>*}
+<script type="text/javascript" src="{$BASE_URL}/vendor/pdfviewer/pdfviewer.js"></script>
+    
+    
     
     <script type="text/javascript" src="{$BASE_URL}/js/tinymce/tinymce.min.js"></script>
     <script type="text/javascript">

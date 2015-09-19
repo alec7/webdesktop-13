@@ -23,6 +23,8 @@ if ( !empty( $_FILES ) ) {
         mkdir($uploadPath."/".$userId, 0777, true);
     }
     
+    //var_dump($fileType);
+    
     switch ($fileType) {
         case "image/jpeg":
         case "image/jpg":
