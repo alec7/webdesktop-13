@@ -12,5 +12,25 @@ $(function(){
             scrollable: false
         });
         return false;  
-    });   
-})
+    });
+    
+    
+    $(document).on("click", '.view-txt', function(){
+        var txtLink = $(this).attr('data');
+        var title = $(this).attr("title");
+        
+        $(".files-content").html("<div class='loader'></div>");
+        setTimeout(function(){
+            $(".files-content").load(txtLink, function(responseTxt, statusTxt, xhr){
+            if (statusTxt == "success"){
+            $(".files-content").slimscroll();
+                $(".files-content").addClass("txt-container");
+            }
+            if (statusTxt == "error")
+                alert("Error: " + xhr.status + ": " + xhr.statusText);
+            });
+        }, 1000);
+    });
+    
+    
+});

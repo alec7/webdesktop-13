@@ -4,13 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/webdesktop/web/templates/main/wajax.js</file>
-            <file>file:/C:/xampp/htdocs/webdesktop/web/includes/user.class.php</file>
             <file>file:/C:/xampp/htdocs/webdesktop/web/css/adaptive.css</file>
             <file>file:/C:/xampp/htdocs/webdesktop/web/templates/main/index.tpl</file>
             <file>file:/C:/xampp/htdocs/webdesktop/web/css/wstyle.css</file>
-            <file>file:/C:/xampp/htdocs/webdesktop/web/templates/main/ajax/user-manager.html</file>
             <file>file:/C:/xampp/htdocs/webdesktop/web/js/wscripts.js</file>
             <file>file:/C:/xampp/htdocs/webdesktop/web/includes/login.class.php</file>
+            <file>file:/C:/xampp/htdocs/webdesktop/web/vendor/docviewer/docviewer.js</file>
+            <file>file:/C:/xampp/htdocs/webdesktop/web/templates/main/ajax/user-files.html</file>
             <file>file:/C:/xampp/htdocs/webdesktop/web/templates/main/index.php</file>
         </group>
     </open-files>

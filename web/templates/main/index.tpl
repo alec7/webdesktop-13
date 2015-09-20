@@ -166,7 +166,7 @@
     <script type="text/javascript" src="{$BASE_URL}/vendor/lightbox/js/lightbox.min.js"></script>
 
     
-<script type="text/javascript" src="{$BASE_URL}/vendor/pdfviewer/pdfviewer.js"></script>
+<script type="text/javascript" src="{$BASE_URL}/vendor/docviewer/docviewer.js"></script>
     
     
     
