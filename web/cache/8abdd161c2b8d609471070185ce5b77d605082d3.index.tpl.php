@@ -5,13 +5,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8abdd161c2b8d609471070185ce5b77d605082d3' => 
     array (
       0 => '.\\templates\\index.tpl',
-      1 => 1425817485,
+      1 => 1445110938,
       2 => 'file',
     ),
     '2996a8bdb882e2c7860944592c29bf484152c53f' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1426531650,
+      1 => 1445105703,
       2 => 'file',
     ),
     'b25fd0a4d850548ccb5040c99c8eb2084c046c01' => 
@@ -23,17 +23,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '860d86d630dfd99abd7bbc44050a7174e418f52c' => 
     array (
       0 => '.\\templates\\footer.tpl',
-      1 => 1426530995,
+      1 => 1445108872,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '1366255e1f73dbd0c37-09738451',
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_55feecce644b23_99398200',
+  'unifunc' => 'content_5622a49d57a0f7_51372096',
+  'variables' => 
+  array (
+    'MAIN_URL' => 0,
+  ),
   'has_nocache_code' => false,
   'cache_lifetime' => 1,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55feecce644b23_99398200')) {function content_55feecce644b23_99398200($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5622a49d57a0f7_51372096')) {function content_5622a49d57a0f7_51372096($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
         <title>V Desktop start page</title>
@@ -42,28 +46,33 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <meta name="keywords" content="" />
     <meta name="description" content="" />
         
+    <link rel="stylesheet" href="http://localhost/webdesktop/web/vendor/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="http://localhost/webdesktop/web/css/style.css" />
-    <script type="text/javascript" src="http://localhost/webdesktop/web/js/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="http://localhost/webdesktop/web/js/scripts.js"></script>
     
-    <!-- Bootstrap included -->
-    <link rel="stylesheet" href="http://localhost/webdesktop/web/bootstrap/bootstrap.css">
-    <script src="http://localhost/webdesktop/web/bootstrap/bootstrap.min.js"></script>
 </head> 
     
 <body>
 
 
     
+<div class="full-block trans">
+    <div class="centered-block text-center">
+        <h1>V Webdesktop</h1>
+        <div>
+            Application to store user data and files. <br />
+            The importance of frameworks in creating Single Page web applications.
+        </div>
+        <div class="btn btn-warning btn-blue trans" onclick="location.href='http://localhost/webdesktop/web/templates/main'">Try Webdesktop</div>
+    </div>
+</div>
     
-    http://localhost/webdesktop/web
-    <br />
-    Welcome in V CMS. This is beta version!!! Don't worry. I'll perfecting it!<br />
-    You are in main file directory -> index.tpl. And that is a link to subpage: <a href="http://localhost/webdesktop/web/templates/main"> ----------LINK---------- </a> <br />
-    (I hope it will not be necessary).
+    <script>
+        var BASE_URL = 'http://localhost/webdesktop/web';
+    </script>
     
-        <br />Anyway, you have base css, jquery.min.js and Bootstrap included.
-    
+    <script type="text/javascript" src="http://localhost/webdesktop/web/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="http://localhost/webdesktop/web/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://localhost/webdesktop/web/js/scripts.js"></script>
 </body>
 </html>
 
