@@ -5,7 +5,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8abdd161c2b8d609471070185ce5b77d605082d3' => 
     array (
       0 => '.\\templates\\index.tpl',
-      1 => 1445110938,
+      1 => 1445111910,
       2 => 'file',
     ),
     '2996a8bdb882e2c7860944592c29bf484152c53f' => 
@@ -23,21 +23,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '860d86d630dfd99abd7bbc44050a7174e418f52c' => 
     array (
       0 => '.\\templates\\footer.tpl',
-      1 => 1445108872,
+      1 => 1445112013,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '1366255e1f73dbd0c37-09738451',
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_5622a49d57a0f7_51372096',
-  'variables' => 
-  array (
-    'MAIN_URL' => 0,
-  ),
+  'unifunc' => 'content_5622aa89060b18_40637811',
   'has_nocache_code' => false,
   'cache_lifetime' => 1,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5622a49d57a0f7_51372096')) {function content_5622a49d57a0f7_51372096($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5622aa89060b18_40637811')) {function content_5622aa89060b18_40637811($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
         <title>V Desktop start page</title>
@@ -62,12 +58,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             Application to store user data and files. <br />
             The importance of frameworks in creating Single Page web applications.
         </div>
-        <div class="btn btn-warning btn-blue trans" onclick="location.href='http://localhost/webdesktop/web/templates/main'">Try Webdesktop</div>
+        <div class="btn btn-warning btn-blue trans" onclick="">Try Webdesktop</div>
     </div>
 </div>
     
     <script>
         var BASE_URL = 'http://localhost/webdesktop/web';
+        var MAIN_URL = 'http://localhost/webdesktop/web/templates/main';
     </script>
     
     <script type="text/javascript" src="http://localhost/webdesktop/web/js/jquery-1.11.2.min.js"></script>

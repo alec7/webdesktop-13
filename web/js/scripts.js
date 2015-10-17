@@ -22,6 +22,11 @@ function notifyAlert(notTitle, notBody, notIcon, notTag) {
             window.focus();
             this.close();
         };
+        mailNotification.onclose = function () {
+            if(notTag == 'cookie'){
+                $(".btn-blue").attr("onclick", "location.href='"+MAIN_URL+"'");
+            }
+        };
   }else if (Notification.permission !== 'denied') {
       Notification.requestPermission();
   }
@@ -42,14 +47,14 @@ function buttonHover(){
 function showAuthorNotification(){
     notTitle = 'Author: Ivan Dublianskyi w49164';
     notBody = 'Thanks for join to us';
-    notIcon  = BASE_URL + "/img/author.jpg";
+    notIcon = BASE_URL + "/img/author.jpg";
     notTag = 'author';
     notifyAlert(notTitle, notBody, notIcon, notTag);
 }
 function showCookiesNotification(){
     notTitle = 'V Webdesktop admin';
-    notBody = 'Webdesktop uses cookies!!! JavaScript and cookies are necessary to correctly working of application.';
-    notIcon  = '';
+    notBody = 'Webdesktop uses cookies!!! JavaScript and cookies are necessary to correctly working of application. If you accept cookies policy click this notification';
+    notIcon = BASE_URL + "/img/click.png";
     notTag = 'cookie';
     notifyAlert(notTitle, notBody, notIcon, notTag);
 }
