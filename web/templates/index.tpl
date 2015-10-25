@@ -8,7 +8,7 @@
             Application to store user data and files. <br />
             The importance of frameworks in creating Single Page web applications.
         </div>
-        <div class="btn btn-warning btn-blue trans" onclick="">Try Webdesktop</div>
+        <a class="btn btn-warning btn-blue trans" href="">Try Webdesktop</a>
     </div>
 </div>
     

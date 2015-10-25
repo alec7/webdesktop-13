@@ -49,7 +49,7 @@
                         <div class="user-files user-music" data="music">Musics</div>
                         <div class="user-files user-video" data="video">Videos</div>
                         <div class="user-files user-docs" data="doc">Documents</div>
-                        <div class="user-files user-archives" data="arhive">Arhives</div>
+                        <div class="user-files user-archives" data="archive">Arhives</div>
                     </div>
                 </div>
             </div>
