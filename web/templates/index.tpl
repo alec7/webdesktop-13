@@ -6,7 +6,7 @@
         <h1>V Webdesktop</h1>
         <div>
             Application to store user data and files. <br />
-            The importance of frameworks in creating Single Page web applications.
+            The importance of frameworks in creating Single Page Web Applications.
         </div>
         <a class="btn btn-warning btn-blue trans" href="">Try Webdesktop</a>
     </div>

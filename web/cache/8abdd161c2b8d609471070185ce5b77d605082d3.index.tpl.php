@@ -29,11 +29,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '1366255e1f73dbd0c37-09738451',
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_562d33e4e74b32_40783423',
+  'unifunc' => 'content_56311d8d9fe797_88817796',
   'has_nocache_code' => false,
   'cache_lifetime' => 1,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_562d33e4e74b32_40783423')) {function content_562d33e4e74b32_40783423($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_56311d8d9fe797_88817796')) {function content_56311d8d9fe797_88817796($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
         <title>V Desktop start page</title>

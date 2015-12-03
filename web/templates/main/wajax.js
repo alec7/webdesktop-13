@@ -38,7 +38,7 @@ $.post(url,
                 var notBody = "Welcome back";
                 var noticon = BASE_URL + "/img/user.jpg";
                 var nottag = "hi";
-                //notifyMe(nottitle, notBody, noticon, nottag);
+                notifyMe(nottitle, notBody, noticon, nottag);
             
             //LoadNotepadWhenLogin(user_id);
             location.reload();
