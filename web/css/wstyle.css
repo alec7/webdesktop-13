@@ -294,7 +294,9 @@ display: block;
     font-size: 20px;
     cursor: pointer;
 }
-.user-tools .shutdown:hover, .user-tools .user-manager-but:hover{
+.user-tools .shutdown:hover,
+.user-tools .user-manager-but:hover,
+.calendar-starter:hover{
     color: red;
 } 
 .user-icon{
