@@ -134,6 +134,15 @@ $(document).ready(function(){
        loadUserFiles(userId, fileType, fileCategory);
    });
    
+//    $(".calendar-starter").click(function(){
+//        loadCalendarPartial();
+//    });
+    $(document).on("click", ".calendar-starter", function(){
+        disableAll();
+        userFiles();
+        loadCalendarPartial();
+    });
+    
     $(document).on("click", ".file-panel .viewer-close", function(){
         userFilesDisable();
     });

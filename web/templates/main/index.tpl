@@ -14,6 +14,12 @@
     <link rel="stylesheet" type="text/css" href="{$BASE_URL}/css/adaptive.css" />
     <link rel="stylesheet" href="{$BASE_URL}/vendor/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="{$BASE_URL}/vendor/lightbox/css/lightbox.css" />
+    
+    <!-- fullCalendar 2.2.5-->
+{*    <link rel="stylesheet" href="{$BASE_URL}/vendor/fullcalendar/fullcalendar.css" />
+    <link rel="stylesheet" href="{$BASE_URL}/vendor/fullcalendar/fullcalendar.print.css" media="print" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{$BASE_URL}/vendor/fa/css/font-awesome.min.css" />*}
 
     
     <script>
@@ -143,6 +149,9 @@
                 </div>
             {/literal}
         </div>
+        
+
+
 
         <div class="user-bar trans200"></div>
         
@@ -160,6 +169,7 @@
         
     <script type="text/javascript" src="{$BASE_URL}/js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="{$BASE_URL}/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{$BASE_URL}/vendor/jquery-ui/jquery-ui.min.js"></script>
     <script type="text/javascript" src="{$BASE_URL}/js/wscripts.js"></script>
     <script type="text/javascript" src="wajax.js"></script>
     <script type="text/javascript" src="{$BASE_URL}/js/slimscroll.js"></script>
@@ -189,6 +199,11 @@
     <script type="text/javascript" src="{$BASE_URL}/js/angular.min.js"></script>
     <script type="text/javascript" src="./angular-file-upload.js"></script>
     <script type="text/javascript" src="./controllers.js"></script>
+    
+    <!-- fullCalendar 2.2.5 -->
+{*    <script src="{$BASE_URL}/vendor/fullcalendar/moment.min.js"></script>
+    <script src="{$BASE_URL}/vendor/fullcalendar/fullcalendar.js"></script>
+    <script src="{$BASE_URL}/vendor/fullcalendar/fullcalendar-ini.js"></script>*}
 
     </body>
 </html>

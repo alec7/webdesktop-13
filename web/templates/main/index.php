@@ -156,6 +156,10 @@ if (isset($_POST)){
             die();
         }
     }
+    if ($_POST['action'] == 'loadCalendarPartial') {
+        $smarty->display('ajax/calendar.html');
+        die();
+    }
     if ($_POST['action'] == 'removeFile') {
         if($oDesktop->removeFile($_POST)){
             return true;

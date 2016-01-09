@@ -219,6 +219,30 @@ function loadUserFiles(userId, fileType, fileCategory){
     });
 }
 
+function loadCalendarPartial(){
+    var url = "index.php";
+    $.post(url,
+            {
+                action: "loadCalendarPartial"
+            },
+    function (data, status) {
+        if (status == "success") {
+            setTimeout(function(){
+                $(".startpopup").html("<div class='file-viewer'><div class='file-panel'><h1 class='text-center'></h1></div></div>");
+                $(".file-viewer").append(data);
+                $(".file-panel h1").html('Calendar' + "<div class='viewer-close'></div>");
+                $(".file-viewer").fadeIn("fast");
+                $(".slim").slimscroll();
+                
+                $(".fc-month-button").click();
+            }, 1000);
+        } else {
+            alert("error");
+            //location.reload();
+        }
+    });
+}
+
 function removeFile(fileId, userId, fileName, fileCategory){
     var url = "index.php";
     $.post(url,
