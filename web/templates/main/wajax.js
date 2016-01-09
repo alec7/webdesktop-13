@@ -1,3 +1,5 @@
+var viewerClose = "<div class='viewer-close'><span class='glyphicon glyphicon-remove'></span></div>";
+
 //var user_ip;
 function getLogin(nickname, password){
     var url = "index.php";
@@ -208,7 +210,7 @@ function loadUserFiles(userId, fileType, fileCategory){
                 $(".startpopup").html("<div class='file-viewer'><div class='file-panel'><h1 class='text-center'></h1></div></div>");
                 //$(".file-viewer").html(data);
                 $(".file-viewer").append(data);
-                $(".file-panel h1").html(fileCategory + "<div class='viewer-close'></div>");
+                $(".file-panel h1").html(fileCategory + viewerClose);
                 $(".file-viewer").fadeIn("fast");
                 $(".files-content").slimscroll();
             }, 1000);
@@ -230,7 +232,7 @@ function loadCalendarPartial(){
             setTimeout(function(){
                 $(".startpopup").html("<div class='file-viewer'><div class='file-panel'><h1 class='text-center'></h1></div></div>");
                 $(".file-viewer").append(data);
-                $(".file-panel h1").html('Calendar' + "<div class='viewer-close'></div>");
+                $(".file-panel h1").html('Calendar' + viewerClose);
                 $(".file-viewer").fadeIn("fast");
                 $(".slim").slimscroll();
                 
@@ -282,7 +284,7 @@ function loadUserData(userId){
             setTimeout(function(){
                 $(".startpopup").html("<div class='file-viewer'><div class='file-panel'><h1 class='text-center'></h1></div></div>");
                 $(".file-viewer").append(data);
-                $(".file-panel h1").html("Your profile" + "<div class='viewer-close'></div>");
+                $(".file-panel h1").html("Your profile" + viewerClose);
                 $(".file-viewer").fadeIn("fast");
                 $(".files-content").slimscroll();
             }, 1000);
@@ -352,7 +354,7 @@ function loadUserManager(userId){
             setTimeout(function(){
                 $(".startpopup").html("<div class='file-viewer'><div class='file-panel'><h1 class='text-center'></h1></div></div>");
                 $(".file-viewer").append(data);
-                $(".file-panel h1").html("Users Manager" + "<div class='viewer-close'></div>");
+                $(".file-panel h1").html("Users Manager" + viewerClose);
                 $(".file-viewer").fadeIn("fast");
                 $(".files-content").slimscroll();
             }, 1000);

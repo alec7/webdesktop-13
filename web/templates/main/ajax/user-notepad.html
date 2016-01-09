@@ -2,6 +2,6 @@
     <div class="notepad-item" id="notepad_item_{$notepad.id}" ident="{$notepad.id}" title="{$notepad.content|truncate:250:'...':false}">
         <div class="notepad-item-wrap" id="notepad_item_{$notepad.id}" ident="{$notepad.id}"></div>
             {$notepad.title|truncate:45:"":false}
-        <div class="delete-item" id="{$notepad.id}" title="delete item"></div>
+            <div class="delete-item" id="{$notepad.id}" title="delete item"><span class="glyphicon glyphicon-remove"></span></div>
     </div>
 {/foreach}
